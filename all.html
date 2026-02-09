@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Stats Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --brand-red: #d93025; /* Matching the red in your image */
+            --text-gray: #555;
+        }
+ @media screen and (max-width: 767px) {
+            .header-bottom-icon {
+                justify-content: flex-start;
+            }
+        }
+
+        .header-bottom-icon {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        @media screen and (max-width: 767px) {
+            .header-bottom-icon {
+                justify-content: flex-start;
+            }
+        }
+
+        .header-bottom-icon {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .header-bottom-box p {
+            font-weight: 400;
+            opacity: .7;
+            font-size: 14px;
+            text-transform: uppercase;
+            line-height: 23px;
+            text-align: start !important;
+            margin-top: 10px;
+        }
+
+      
+
+        .header-bottom-icon {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+      
+
+     
+
+      
+
+       
+
+       
+        .stats-section {
+            padding: 40px 0;
+            background-color: #f9f9f9;
+        }
+
+        .stat-card {
+            padding: 20px;
+            transition: transform 0.3s ease;
+            border-right: 1px solid #dee2e6;
+        }
+
+        /* Remove border on the last item or on mobile */
+        @media (max-width: 767px) {
+            .stat-card {
+                border-right: none;
+                border-bottom: 1px solid #dee2e6;
+            }
+        }
+
+        .stat-card:last-child {
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            color: var(--brand-red);
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-gray);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+.header-bottom-icon h2 {
+    padding: 0;
+    margin: 0;
+    color: #222226;
+    text-transform: uppercase !important;
+    font-weight: 900;
+    font-family: 'Romelio Sans' !important;
+    font-feature-settings: 'lnum', 'pnum';
+    font-size: 70px !important;
+}
+.header-bottom-icon span{
+    font-size: 70px !important;
+}
+    </style>
+</head>
+<body>
+
+<section class="stats-section">
+    <div class="container-fluid">
+        <div class="row text-center g-0">
+            <div class="col-6 col-md-4 col-lg">
+                <div class="header-bottom-box">
+                    <div class="header-bottom-icon">
+                        <div class="header-top-icon">
+                            <img src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                alt="Building31.png"
+                                data-lazy-src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                data-ll-status="loaded" class="entered lazyloaded"><noscript><img
+                                    src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                    alt="Building31.png" /></noscript>
+                        </div>
+                                            <!-- <div class="stat-number"><span class="counter" data-target="76">0</span>+</div> -->
+
+                        <h2><span class="counter" data-target="76">0</span>+ </h2>
+                    </div>
+                    <p>MILLION SQ. FT. DELIVERED</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg">
+                <div class="header-bottom-box">
+                    <div class="header-bottom-icon">
+                        <div class="header-top-icon">
+                            <img src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                alt="Building31.png"
+                                data-lazy-src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                data-ll-status="loaded" class="entered lazyloaded"><noscript><img
+                                    src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                    alt="Building31.png" /></noscript>
+                        </div>
+                                            <div class="stat-number"><span class="counter" data-target="76">0</span>+</div>
+
+                        <!-- <h2><span class="counter">31</span>+ </h2> -->
+                    </div>
+                    <p>MILLION SQ. FT. DELIVERED</p>
+                </div>
+            </div>
+
+           <div class="col-6 col-md-4 col-lg">
+                <div class="header-bottom-box">
+                    <div class="header-bottom-icon">
+                        <div class="header-top-icon">
+                            <img src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                alt="Building31.png"
+                                data-lazy-src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                data-ll-status="loaded" class="entered lazyloaded"><noscript><img
+                                    src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                    alt="Building31.png" /></noscript>
+                        </div>
+                                            <div class="stat-number"><span class="counter" data-target="76">0</span>+</div>
+
+                        <!-- <h2><span class="counter">31</span>+ </h2> -->
+                    </div>
+                    <p>MILLION SQ. FT. DELIVERED</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg">
+                <div class="header-bottom-box">
+                    <div class="header-bottom-icon">
+                        <div class="header-top-icon">
+                            <img src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                alt="Building31.png"
+                                data-lazy-src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                data-ll-status="loaded" class="entered lazyloaded"><noscript><img
+                                    src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                    alt="Building31.png" /></noscript>
+                        </div>
+                                            <div class="stat-number"><span class="counter" data-target="76">0</span>+</div>
+
+                        <!-- <h2><span class="counter">31</span>+ </h2> -->
+                    </div>
+                    <p>MILLION SQ. FT. DELIVERED</p>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg">
+                <div class="header-bottom-box">
+                    <div class="header-bottom-icon">
+                        <div class="header-top-icon">
+                            <img src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                alt="Building31.png"
+                                data-lazy-src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                data-ll-status="loaded" class="entered lazyloaded"><noscript><img
+                                    src="https://ajmera.com/wp-content/uploads/revslider/home-new/building31.png"
+                                    alt="Building31.png" /></noscript>
+                        </div>
+                                            <div class="stat-number"><span class="counter" data-target="76">0</span>+</div>
+
+                        <!-- <h2><span class="counter">31</span>+ </h2> -->
+                    </div>
+                    <p>MILLION SQ. FT. DELIVERED</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the slower
+
+    const startCount = () => {
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    }
+
+    // Intersection Observer to trigger animation when section is visible
+    const observer = new IntersectionObserver((entries) => {
+        if(entries[0].isIntersecting) {
+            startCount();
+            observer.disconnect(); // Runs only once
+        }
+    }, { threshold: 0.5 });
+
+    observer.observe(document.querySelector('.stats-section'));
+</script>
+
+</body>
+</html>

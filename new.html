@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Stats Section</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --brand-red: #d93025; /* Matching the red in your image */
+            --text-gray: #555;
+        }
+
+        .stats-section {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .stat-card {
+            padding: 20px;
+            transition: transform 0.3s ease;
+            border-right: 1px solid #dee2e6;
+        }
+
+        /* Remove border on the last item or on mobile */
+        @media (max-width: 767px) {
+            .stat-card {
+                border-right: none;
+                border-bottom: 1px solid #dee2e6;
+            }
+        }
+
+        .stat-card:last-child {
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            color: var(--brand-red);
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-gray);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<section class="stats-section">
+    <div class="container">
+        <div class="row text-center g-0">
+            <div class="col-6 col-md-4 col-lg">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-regular fa-building"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="56">0</span>+</div>
+                    <div class="stat-label">Years of Building<br>Trust</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-house-chimney-window"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="46000">0</span>+</div>
+                    <div class="stat-label">Happily Residing<br>Families</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-city"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="100">0</span>+</div>
+                    <div class="stat-label">Projects Worked<br>On</div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="6">0</span>+<span class="counter" data-target="2">0</span></div>
+                    <div class="stat-label">Cities +<br>Countries</div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg">
+                <div class="stat-card">
+                    <div class="stat-icon"><i class="fa-solid fa-chart-area"></i></div>
+                    <div class="stat-number"><span class="counter" data-target="31">0</span>+</div>
+                    <div class="stat-label">Million Sq. Ft.<br>Delivered</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the slower
+
+    const startCount = () => {
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const inc = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + inc);
+                    setTimeout(updateCount, 20);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            updateCount();
+        });
+    }
+
+    // Intersection Observer to trigger animation when section is visible
+    const observer = new IntersectionObserver((entries) => {
+        if(entries[0].isIntersecting) {
+            startCount();
+            observer.disconnect(); // Runs only once
+        }
+    }, { threshold: 0.5 });
+
+    observer.observe(document.querySelector('.stats-section'));
+</script>
+
+</body>
+</html>
