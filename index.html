@@ -4,151 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate - Tricity</title>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    
-    <style>
-        :root {
-            --gold: #c5a059;
-            --navy: #002349;
-            --text-gray: #666;
-        }
-
-        body { font-family: 'Arial', sans-serif; overflow-x: hidden; }
-
-        /* Navbar Styling */
-        .navbar { background: white; padding: 15px 0; }
-        .nav-link { 
-            color: #333 !important; 
-            font-weight: 500; 
-            font-size: 14px; 
-            text-transform: uppercase;
-            padding: 0 15px !important;
-        }
-        .phone-link { color: #0d6efd !important; font-weight: bold; font-size: 18px; }
-
-        /* Hero Styling */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070');
-            background-size: cover;
-            background-position: center;
-            height: 85vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .hero-title { font-size: 3.5rem; font-weight: 700; text-shadow: 2px 2px 10px rgba(0,0,0,0.5); }
-        .hero-subtitle { font-size: 1.5rem; opacity: 0.9; }
-
-        /* Enquire Tab */
-        .enquire-btn {
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            background: var(--gold);
-            color: white;
-            padding: 20px 8px;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-            font-weight: bold;
-            letter-spacing: 1px;
-            border-radius: 5px 0 0 5px;
-            text-transform: uppercase;
-            font-size: 12px;
-        }
-
-        /* Search Section */
-        .search-wrapper {
-            background: white;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-            margin-top: -190px;
-            position: relative;
-            z-index: 10;
-            padding: 30px;
-            border-radius: 4px;
-        }
-
-        .tab-btn {
-            border: none;
-            background: none;
-            font-size: 18px;
-            color: var(--text-gray);
-            padding: 0 0 5px 0;
-            margin-right: 30px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-        .tab-btn.active {
-            color: #000;
-            border-bottom: 3px solid var(--gold);
-            font-weight: bold;
-        }
-
-        .form-select-custom {
-            border: none;
-            border-bottom: 1px solid #ccc;
-            border-radius: 0;
-            padding: 10px 0;
-            color: var(--text-gray);
-            font-size: 14px;
-        }
-        .form-select-custom:focus { box-shadow: none; border-color: var(--gold); }
-
-        .btn-search {
-            background: var(--navy);
-            color: white;
-            border-radius: 3px;
-            font-weight: bold;
-            padding: 12px;
-            width: 100%;
-            border: none;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .hero-title { font-size: 2rem; }
-            .search-wrapper { margin-top: 20px; padding: 20px; }
-            .enquire-btn { display: none; }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/style.css">
+ 
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg animate__animated animate__fadeIn">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="https://cdn-icons-png.flaticon.com/512/609/609803.png" width="40" alt="logo">
-                <div class="ms-2">
-                    <span class="d-block fw-bold" style="line-height: 1;">REAL</span>
-                    <span class="small text-muted" style="font-size: 10px;">ESTATE</span>
-                </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link phone-link" href="#"><i class="fa fa-phone me-1"></i> +91-1324546787</a></li>
-                </ul>
+   <nav class="navbar navbar-expand-lg  fixed-top shadow-lg h-20 p-2">
+    <div class="container-fluid ">
+      <!-- logo -->
+
+       <div class="logo">
+                <img src="/assets/image/logo.png" width="150px" alt="">
+                <!-- <h5>Aajneeti</h5> -->
             </div>
+      <!-- navbar-toggler -->
+      <button class="navbar-toggler navbar-toggler-white  shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+      <!-- sidebar -->
+      <div style="background-color: rgb(255, 255, 255)" class="offcanvas offcanvas-end" tabindex="" id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel">
+        <div style="border-bottom: 2px solid #F26722;" class="offcanvas-header text-dark">
+          <div class=" d-flex align-items-center logo">
+            <img class="" src="Image/logo.png" alt="">
+
+          </div>
+          <button type="button" class="btn-close btn-close-white shadow-none border-0" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
         </div>
-    </nav>
+        <!-- sidebar -->
+        <div class="offcanvas-body justify-content-end  ayush">
+          <ul id="nav-small" class="navbar-nav justify-content-end  fs-8  flex-grow-1 pe-1 align-items-center ayush">
+            <li class="nav-item mx-2 ">
+              <a class="nav-link " aria-current="page" href="index.html">Home</a>
+            </li>
+
+
+
+            <li class="nav-item mx-2">
+              <a class="nav-link  " href="about.html">About Us</a>
+            </li>
+
+            <!-- <li class="nav-item mx-2">
+                <a class="nav-link text-gray-900 p-2" href="location.html">location</a>
+              </li> -->
+
+            <li class="nav-item mx-2">
+              <a class="nav-link " href="gallery.html">Gallery</a>
+            </li>
+         
+            <li class="nav-item mx-2">
+              <a class="nav-link  " href="contact.html">Contact</a>
+            </li>
+
+           
+  <li class="nav-item mx-2">
+              <a class="nav-link  " href="blog.html">Blog</a>
+            </li>
+    <li class="nav-item"><a class="nav-link" href="#">
+                            <div style="border-bottom: 1.5px solid red; font-size: 20px;"><i
+                                    class="fas fa-phone-alt me-1 text-primary"></i> +91-1324546787</div>
+                        </a></li>
+
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </nav>
 
     <header class="hero text-center text-white">
-        <div class="enquire-btn">ENQUIRE NOW</div>
+        <div class="enquire-btn"  data-bs-toggle="modal"
+                        data-bs-target="#enquiryModal">ENQUIRE NOW</div>
         <div class="container animate__animated animate__zoomIn">
             <h1 class="hero-title">Explore Properties You Will Fall In Love With</h1>
             <p class="hero-subtitle">Find Your Dream Property in Tricity</p>
@@ -164,42 +99,82 @@
             
             <div class="row g-4 align-items-end">
                 <div class="col-lg-3 col-md-6">
-                    <select class="form-select form-select-custom" id="location">
-                        <option selected>Select Your Desired Location From dropdown</option>
+                    <select class="form-select-custom form-select border-1 rounded-0 p-2" id="location">
+                        <option selected>Select Your Desired Location </option>
                         <option>Chandigarh</option>
                         <option>Mohali</option>
                         <option>Panchkula</option>
                     </select>
                 </div>
                 <div class="col-lg-2 col-md-6">
-                    <select class="form-select form-select-custom" id="propType">
+                    <select class="form-select-custom form-select border-1 rounded-0 p-2" id="propType">
                         <option selected>Property Type</option>
                         <option>Apartment</option>
                         <option>Villa</option>
                     </select>
                 </div>
                 <div class="col-lg-2 col-md-6">
-                    <select class="form-select form-select-custom" id="budget">
+                    <select class="form-select-custom form-select border-1 rounded-0 p-2" id="budget">
                         <option selected>Budget</option>
                         <option>Below 50L</option>
                         <option>50L - 1Cr</option>
                     </select>
                 </div>
                 <div class="col-lg-2 col-md-6">
-                    <select class="form-select form-select-custom" id="category">
+                    <select class="form-select-custom form-select border-1 rounded-0 p-2" id="category">
                         <option selected>Flat</option>
                         <option>2 BHK</option>
                         <option>3 BHK</option>
                     </select>
                 </div>
                 <div class="col-lg-3 col-md-12">
-                    <button class="btn btn-search">
+                    <button class=" btn-search">
                         <i class="fa fa-search"></i> SEARCH PROPERTY
                     </button>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
+
+
+<!-- popup form start  -->
+   <div class="modal fade" id="enquiryModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold">Enquire Now</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Full Name*" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email Address*" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="Phone Number*" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="3" placeholder="I'm interested in..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit">SUBMIT REQUEST</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- popup form end  -->
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
