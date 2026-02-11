@@ -231,6 +231,21 @@ body {
     box-shadow: none !important;
     text-decoration: none;
 }
+.btnnn {
+    /* background-color: var(--navy); */
+    min-width: 156px;
+    color: #000000 !important;
+    font-weight: 700;
+
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    text-decoration: none;
+}
 
 
 element.style {
@@ -243,10 +258,10 @@ element.style {
     }
 }
 
-.btnn svg {
-    width: 24px;
+.btnnn svg {
+    width: 20px !important;
     height: auto;
-    fill: #FFF;
+    fill: #000000 !important;
     display: inline-block;
     position: relative;
     margin-left: 10px;
@@ -265,7 +280,23 @@ img,
 svg {
     vertical-align: middle;
 }
-
+.btnnn svg {
+    width: 24px;
+    height: auto;
+    fill: #FFF;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.4s;
+    top: -2px;
+    -moz-transition: opacity 0.2s, -moz-transform 0.4s;
+    transition: opacity 0.2s, transform 0.4s;
+    transition-duration: 0.2s, 0.4s;
+    transition-delay: 0s, 0s;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
 
 /* start slide card css  */
   /* --- Project Cards & Animations --- */
