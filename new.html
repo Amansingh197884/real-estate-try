@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Location - Interactive Map</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-green: #61892f; /* Matching the green in your image */
+        }
+
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .section-title {
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        /* Map Container */
+        .map-wrapper {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .map-img {
+            width: 100%;
+            display: block;
+            height: auto;
+        }
+
+        /* Marker Styling */
+        .map-marker {
+            position: absolute;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .marker-icon {
+            color: #fff;
+            font-size: 2.5rem;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+    .marker-number {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: var(--primary-green);
+    color: white;
+    font-size: 0.65rem;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+        /* Animation for Point 4 */
+        .pulse-active {
+            animation: markerPulse 1s infinite ease-in-out;
+            color: #d9534f !important; /* Changes to reddish on pulse */
+        }
+
+        @keyframes markerPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.4); filter: drop-shadow(0 0 15px rgba(97, 137, 47, 0.8)); }
+            100% { transform: scale(1); }
+        }
+
+        /* List Styling */
+        .location-list .list-group-item {
+            border: none;
+            background: transparent;
+            padding: 12px 0;
+            transition: all 0.2s;
+            cursor: pointer;
+            border-bottom: 1px solid #e0e0e0 !important;
+              gap: clamp(1.5rem, -0.478rem + 4.12vw, 3.125rem);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--border-color);
+    position: relative;
+    padding-right: 44px;
+       margin-bottom: 10px;
+    padding-bottom: 10px;
+        }
+
+        .location-list .list-group-item:hover {
+            padding-left: 10px;
+            background-color: rgba(97, 137, 47, 0.05);
+        }
+
+        .item-no {
+            color: var(--primary-green);
+            font-weight: bold;
+            min-width: 35px;
+            display: inline-block;
+        }
+
+        /* Approximate Pin Positions (Adjust % to match image exactly) */
+        .pin-1 { top: 20%; left: 50%; }
+        .pin-2 { top: 40%; left: 85%; }
+        .pin-3 { top: 25%; left: 15%; }
+        .pin-4 { top: 75%; left: 12%; } /* Specific Pin for Hotel Area */
+        .pin-5 { top: 65%; left: 90%; }
+        .pin-6 { top: 35%; left: 30%; }
+        .pin-7 { top: 30%; left: 75%; }
+        .pin-8 { top: 20%; left: 25%; }
+        .pin-9 { top: 15%; left: 80%; }
+        
+
+    </style>
+</head>
+<body>
+
+<div class="container py-5">
+    <div class="row g-5 align-items-center">
+        
+        <div class="col-lg-7">
+            <div class="map-wrapper">
+                <img src="	https://www.santiamestates.com/assets/images/Picture1_new.webp" class="map-img" alt="Location Map">
+                
+                <div class="map-marker pin-4" id="marker-4">
+                    <i class="fa-solid fa-location-dot marker-icon"></i>
+                    <span class="marker-number">4</span>
+                </div>
+                
+                <div class="map-marker pin-3"><i class="fa-solid fa-location-dot marker-icon"></i><span class="marker-number">3</span></div>
+                <div class="map-marker pin-6"><i class="fa-solid fa-location-dot marker-icon"></i><span class="marker-number">6</span></div>
+                <div class="map-marker pin-8"><i class="fa-solid fa-location-dot marker-icon"></i><span class="marker-number">8</span></div>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <h2 class="section-title mb-4">Our Location</h2>
+            <p class="text-muted small mb-4">Welcome to a vibrant community that's more than just a neighbourhood; it's a dynamic hub in a prime location.</p>
+
+            <div class="location-list">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex align-items-start">
+                        <span class="item-no">01.</span>
+                        <span>Located in a rapidly developing area</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-start">
+                        <span class="item-no">02.</span>
+                        <span>Adjacent to Bhogapuram International Airport (opening June 2026)</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-start" 
+                        onmouseover="startAnim()" 
+                        onmouseout="stopAnim()" 
+                        onclick="startAnim()">
+                        <span class="item-no">04.</span>
+                        <span><strong>5-star hotels within 3 km:</strong> Sunray Beach Front, Oberoi, Mayfair, and GMR Airport Hotel</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-start">
+                        <span class="item-no">05.</span>
+                        <span>6 km away from Miracle Software Park</span>
+                    </li>
+                    <li class="list-group-item d-flex align-items-start">
+                        <span class="item-no">09.</span>
+                        <span>15 km from IIM Visakhapatnam</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    const marker4 = document.getElementById('marker-4');
+
+    function startAnim() {
+        marker4.classList.add('pulse-active');
+    }
+
+    function stopAnim() {
+        // Keep animation for 2 seconds even after mouse out for better effect
+        setTimeout(() => {
+            marker4.classList.remove('pulse-active');
+        }, 1500);
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
