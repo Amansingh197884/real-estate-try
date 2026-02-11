@@ -65,7 +65,7 @@ body {
 /* Hero Styling */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url('/images/2hero.jpg');
+        url('https://i.pinimg.com/1200x/9b/96/4a/9b964a7b35dd1bf9ab0869cdb3ec6331.jpg');
     background-size: cover;
     background-position: center;
     height: 95vh;
