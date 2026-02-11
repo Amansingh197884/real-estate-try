@@ -54,8 +54,8 @@
     </nav> -->
 
 
-    <!-- 2 -->
-  <nav class="navbar navbar-expand-lg  fixed-top shadow-lg h-20 p-2">
+<!-- 2 -->
+ <nav class="navbar navbar-expand-lg  fixed-top shadow-lg h-20 p-2">
         <div class="container-fluid ">
             <!-- logo -->
 
@@ -124,126 +124,232 @@
         </div>
     </nav>
 
-    <!-- navbar end  -->
-    <section class="About-us">
+<!-- navbar end  -->
+   <section class="About-us">
         <header class="hero-section container-fluid d-flex justify-content-center align-items-center">
             <div class="hero-content text-center">
                 <h1 class="display-1 text-white fw-bold mb-4">INTERIOR TRENDS</h1>
 
                 <div class="btn-group hero-btn-group" role="group" aria-label="Login and Sign Up buttons">
                     <a class="btn hero-btn log-in-btn" href="index.html">HOME</a>
-                    <button type="button" class="btn hero-btn sign-up-btn">About us</button>
+                    <button type="button" class="btn hero-btn sign-up-btn">Gallery</button>
                 </div>
             </div>
         </header>
     </section>
+<!-- 2 -->
+  <div class="container-fluid gallery-container">
+    <h1 class="gallery-title">GALLERY</h1>
 
-   
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-pills" id="galleryTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="exterior-tab" data-bs-toggle="tab" data-bs-target="#exterior" type="button"
+          role="tab" aria-controls="exterior" aria-selected="true">Exterior</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="interior-tab" data-bs-toggle="tab" data-bs-target="#interior" type="button"
+          role="tab" aria-controls="interior" aria-selected="false">Interior</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="amenities-tab" data-bs-toggle="tab" data-bs-target="#amenitiess" type="button"
+          role="tab" aria-controls="amenities" aria-selected="false">Amenities</button>
+      </li>
+    </ul>
 
+    <!-- Tab Content -->
+    <div class="tab-content" id="galleryTabContent">
 
-   <section class="prestige-section animate__animated animate__fadeInUp animate__delay-2s" id="counter-section">
-        <div class="container">
-            <div class="row align-items-center">
-
-                <div class="col-lg-7 col-md-12 mb-5 mb-lg-0">
-                    <p class="sub-heading text-uppercase">About Our Group</p>
-
-                    <div class="d-flex align-items-start mb-4 flex-wrap">
-                       
-                        <h1 class="main-title">Only DA1+ rated<br>Real Estate Developer in India</h1>
-                    </div>
-
-                    <p class="description pe-lg-5 mb-4">
-                        One of India's most trusted and respected names in Real Estate - The Group is synonymous with
-                        innovation and luxurious living. Since 1986, Prestige has helped build the face of Modern Urban
-                        India in its glorious globalized avatar by consistently introducing and creating
-                        state-of-the-art transformative real estate concepts, technologies and innovations.
-                    </p>
-
-                    <a href="#" class="see-details">SEE DETAILS <img style="width: 20px;" src="images/right-arrow.png"
-                            alt=""></a>
-                </div>
-
-                <div class="col-lg-5 col-md-12">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="stat-box">
-                                <span class="counter-value" data-target="19">0</span><span class="plus-sign">+</span>
-                                <div class="stat-label">Years of Excellence</div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="stat-box">
-                                <span class="counter-value" data-target="339">0</span><span class="plus-sign">+</span>
-                                <div class="stat-label">Projects Completed</div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="stat-box">
-                                <span class="counter-value" data-target="198">0</span><span class="plus-sign">+</span>
-                                <div class="stat-label">Mn. Sq. Ft. Delivered</div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="stat-box">
-                                <span class="counter-value" data-target="170">0</span><span class="plus-sign">+</span>
-                                <div class="stat-label">Mn. Sq. Ft. Underway</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+      <!-- EXTERIOR GALLERY -->
+      <div class="tab-pane fade show active" id="exterior" role="tabpanel" aria-labelledby="exterior-tab">
+        <!-- row-cols-1 ensures single column on phone, row-cols-md-2 on tablet, row-cols-lg-3 on desktop -->
+        <div class="row row g-3 justify-content-center">
+          <!-- Images for Exterior -->
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/736x/aa/6e/07/aa6e07e8252d942f87b8e77108cf91d9.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/736x/aa/6e/07/aa6e07e8252d942f87b8e77108cf91d9.jpg"
+                alt="Building Overview">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Building Overview</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/736x/64/7d/1b/647d1b9c403e41ce829b7cb0cef68450.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/736x/64/7d/1b/647d1b9c403e41ce829b7cb0cef68450.jpg" alt="Main Entrance">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Main Entrance View</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/736x/93/61/10/936110ecb66d247b00681923d161a6d0.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/736x/93/61/10/936110ecb66d247b00681923d161a6d0.jpg" alt="Lush Landscaping">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Lush Landscaping and Garden</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/736x/6f/6d/a8/6f6da8afb1eba0fd00ea7f7da89616ec.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/736x/6f/6d/a8/6f6da8afb1eba0fd00ea7f7da89616ec.jpg" alt="Skyline View">
+              <div class="gallery-overlay">
+                <span class="overlay-text">City Skyline View</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/736x/d1/f6/fb/d1f6fb4a0ef9e3a61e22a96f0eec1930.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/736x/d1/f6/fb/d1f6fb4a0ef9e3a61e22a96f0eec1930.jpg" alt="Night View">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Building Night View</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/736x/9b/3f/bf/9b3fbf3c480ba2b2c248616d49b4db6f.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/736x/9b/3f/bf/9b3fbf3c480ba2b2c248616d49b4db6f.jpg" alt="Street View">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Residential Street View</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
         </div>
-    </section>
-
-<!-- new  -->
- 
-
-
-   <section class="mt-5 pt-5 mb-5">
-        <div class="container">
-            <div class="row ">
-                <div class="col-lg-6">
-                    <div class="img">
-                        <img src="https://i.pinimg.com/736x/30/f7/7d/30f77d9f560a5de43530f38e2f500b12.jpg" alt="" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-conten">
-                        <h6>About Us</h6>
-                        <h2>We Always Make The Best</h2>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora itaque, nobis repellat
-                            repudiandae cum sed dolorum ab tempore excepturi consequuntur alias debitis minus eius
-                            inventore autem vitae assumenda, fugit aliquid cumque! Optio reprehenderit deleniti,
-                            pariatur vel sit sunt aliquam enim? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Vitae in, reprehenderit ipsa voluptatem adipisci quo blanditiis quia voluptas sunt fugit
-                            doloribus hic natus, quas necessitatibus beatae nam quasi voluptatibus aliquid.</p>
-
-                            <div class="col-md-6 mt-5">
-                            <button class="btn-search p-" style="background-color: #c5a059 !important;"><i
-                                    class="fa fa-search me-2"></i> SEARCH PROPERTY</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-  <!-- end  -->
-   <div class="container-fluid mt-5 mb-5 "
-    style="padding: 20px; margin-top: 100px !important; background-size: cover; background-repeat: no-repeat; background:linear-gradient(rgba(0, 0, 0, 0.90), rgba(0, 0, 0, 0.3)),  url(https://i.pinimg.com/1200x/65/ca/8c/65ca8c20fdfdd50d0ba2c64178e2a5ab.jpg); height: 50vh; background-position: center;">
-    <div class="col-lg-12 align-items-center">
-      <div class="new-content text-center mt-5">
-       <h5 class="text-white fw-bold">Hire Us Now</h5>
-       <h2 class="text-white fw-bold " style="font-size: 50px;">We Are Always Ready To <br> Take A Perfect Shot </h2>
-        <div class="col-12 mt-5">
-                            <button class="btn-search p-" style="background-color: #c5a059 !important; width: 250px;">Get Started</button>
-                        </div>
       </div>
+
+      <!-- INTERIOR GALLERY -->
+      <div class="tab-pane fade" id="interior" role="tabpanel" aria-labelledby="interior-tab">
+        <div class="row row g-3  justify-content-center">
+          <!-- Images for Interior -->
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/1200x/90/7e/61/907e6137db79eac81c20cc9fcacd6ba4.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/1200x/90/7e/61/907e6137db79eac81c20cc9fcacd6ba4.jpg" alt="Living Room">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Spacious Living Room</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/736x/c9/3d/77/c93d7790a66b4876704e597152444f1c.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/736x/c9/3d/77/c93d7790a66b4876704e597152444f1c.jpg" alt="Master Bedroom">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Master Bedroom Suite</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/736x/46/4e/9e/464e9e8f05e53281a01584395c67024e.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/736x/46/4e/9e/464e9e8f05e53281a01584395c67024e.jpg" alt="Modern Kitchen">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Modular Kitchen Design</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/736x/7f/78/fc/7f78fcc66a13074efe1be01a7b196f0f.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/736x/7f/78/fc/7f78fcc66a13074efe1be01a7b196f0f.jpg" alt="Dining Area">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Elegant Dining Area</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/1200x/eb/fb/f2/ebfbf2ae597201f4237f244430c48800.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/1200x/eb/fb/f2/ebfbf2ae597201f4237f244430c48800.jpg" alt="Luxury Bathroom">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Luxury Bathroom Finish</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/736x/00/a5/57/00a557db876fa75d0ccf5d4668d760ee.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/736x/00/a5/57/00a557db876fa75d0ccf5d4668d760ee.jpg" alt="Home Office">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Dedicated Home Office Space</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- AMENITIES GALLERY -->
+      <div class="tab-pane fade" id="amenitiess" role="tabpanel" aria-labelledby="amenities-tab">
+        <div class="row row g-3  justify-content-center">
+          <!-- Images for Amenities -->
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/1200x/3b/7a/42/3b7a42e980d0ca354c078467c1f07871.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/1200x/3b/7a/42/3b7a42e980d0ca354c078467c1f07871.jpg" alt="Rooftop Pool">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Rooftop Swimming Pool</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/1200x/69/9b/36/699b36fe751f7a7fd00390d9d9330549.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/1200x/69/9b/36/699b36fe751f7a7fd00390d9d9330549.jpg" alt="Fitness Center">
+              <div class="gallery-overlay">
+                <span class="overlay-text">State-of-the-Art Fitness Center</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/736x/73/97/7a/73977aa4b52a1700410dc6812eb89f99.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/736x/73/97/7a/73977aa4b52a1700410dc6812eb89f99.jpg" alt="Community Lounge">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Relaxing Community Lounge</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/1200x/6e/81/ad/6e81ad918123f235117054229b7f2895.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/1200x/6e/81/ad/6e81ad918123f235117054229b7f2895.jpg"
+                alt="Children's Play Area">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Secure Children's Play Area</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/1200x/e2/9c/a9/e29ca9377a57c5f96590b8b15b8ca0c8.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/1200x/e2/9c/a9/e29ca9377a57c5f96590b8b15b8ca0c8.jpg" alt="Yoga Studio">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Calm Yoga and Meditation Studio</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4 col-sm-6 col-4 gallery-item-wrap">
+            <a href="https://i.pinimg.com/736x/f5/ea/84/f5ea8463b5ca91474522e8961c74e683.jpg" class="gallery-item">
+              <img src="https://i.pinimg.com/736x/f5/ea/84/f5ea8463b5ca91474522e8961c74e683.jpg" alt="Gardens">
+              <div class="gallery-overlay">
+                <span class="overlay-text">Well-Maintained Gardens</span>
+                <button class="btn btn-primary view-btn">View</button>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
-   <!-- end  -->
-     <footer class="footer-section">
+  <!-- 2 -->
+  <footer class="footer-section">
     <div class="container">
         <div class="row gy-4 justify-content-between">
             
@@ -619,7 +725,5 @@
         };
     </script>
     <!-- jQuery -->
-
     <body>
-
-</html>
+        </html>
