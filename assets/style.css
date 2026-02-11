@@ -1067,3 +1067,94 @@ svg {
             .services-title { font-size: 2.2rem; }
             .services-hero { min-height: auto; }
         }
+        /* about us css start  */
+           .About-us .hero-section {
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            
+                  background-image: url('https://i.pinimg.com/1200x/49/3b/63/493b63e13b5729ba5b170f920b226568.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: relative; 
+        }
+
+        .About-us .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.45); 
+            z-index: 1; 
+        }
+
+        .About-us .hero-content {
+            z-index: 2; 
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+        .About-us .hero-content h1 {
+            font-size: 5rem; 
+            letter-spacing: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+        }
+
+       
+        .About-us .hero-btn-group {
+            border-radius: 50px; 
+            overflow: hidden;
+            box-shadow: 0 0 0 2px #ffffff; 
+        }
+
+        .About-us .hero-btn {
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 0.05rem;
+            border: none;
+            transition: all var(--transition-speed) ease-in-out; 
+        }
+
+        .About-us .log-in-btn {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: #ffffff;
+        }
+
+      
+        .About-us .sign-up-btn {
+            background-color:rgba(255, 255, 255, 0.85) !important;
+            color: #333333;
+        }
+
+       
+        .About-us .log-in-btn:hover {
+            background-color: rgba(255, 255, 255, 1); 
+            color: #000000;
+            transform: scale(1.05); 
+        }
+
+        .About-us .sign-up-btn:hover {
+            background-color: rgba(255, 255, 255, 1);
+            color: #000000;
+            transform: scale(1.05); 
+        }
+
+        @media (max-width: 768px) {
+            .About-us .hero-content h1 {
+                font-size: 3rem; 
+                letter-spacing: 0.2rem;
+            }
+
+            .About-us .hero-btn {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+         :root {
+            --primary-color: #333333;
+            --secondary-color: #777777;
+            --accent-color: #a08c69; /* Color similar to the icon outlines in the image */
+            --transition-speed: 0.3s;
+        }
