@@ -10,37 +10,26 @@ body {
 }
 
 /* --- Navbar & Top Bar --- */
-.top-bar {
-    background: #fff;
-    border-bottom: 1px solid var(--light-border);
-    padding: 8px 0;
-    font-size: 13px;
-}
 
-.navbar {
-    border-bottom: 1px solid var(--light-border);
-    padding: 15px 0;
-    background: #fff !important;
-}
 
-.navbar-brand {
-    font-weight: 700;
-    color: var(--brand-blue) !important;
-    font-size: 22px;
-}
+
+
+
 
 .nav-link {
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: 600;
-    color: #666666 !important;
+   
     margin: 0 10px;
     transition: 0.3s;
 }
-
-.nav-link:hover {
-    color: var(--brand-gold) !important;
+.nav-item .nav-link{
+    color: #000 !important;
+    font-weight: 510;
 }
+.nav-item .nav-link:hover{
+    color: var(--gold) !important;
+    font-weight: 510;
+}
+
 
 /* Navbar Styling */
 .navbar {
@@ -49,10 +38,7 @@ body {
 }
 
 .nav-link {
-    color: #333 !important;
-    font-weight: 500;
-    font-size: 14px;
-    text-transform: uppercase;
+  
     padding: 0 15px !important;
 }
 
@@ -1320,3 +1306,133 @@ svg {
             border-color: #7b5b42;
         }
 
+/* btn  */
+
+.read-btn {
+    color: #000000;
+    font-weight: 700;
+/* border-bottom: 2px solid; */
+    display: inline-block;
+    font-size: 14px;
+    letter-spacing: .5px;
+    /* line-height: 1.8; */
+    /* text-transform: uppercase; */
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    text-decoration: none;
+}
+
+
+element.style {
+    enable-background: new 0 0 32 32;
+}
+
+@media screen and (max-width: 1199px) {
+    .read-btn svg {
+        margin-left: 6px;
+    }
+}
+
+.read-btn svg {
+    width: 20px;
+    height: auto;
+    fill: #000000;
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.4s;
+    /* top: -2px; */
+    -moz-transition: opacity 0.2s, -moz-transform 0.4s;
+    transition: opacity 0.2s, transform 0.4s;
+    transition-duration: 0.2s, 0.4s;
+    transition-delay: 0s, 0s;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+img,
+svg {
+    vertical-align: middle;
+}
+
+  .vm-container {
+            min-height: 400px;
+            /* background-color: var(--bg-light); */
+            background-image: url(bg-pattern.jpg);
+            border: 1px solid #f0f0f0;
+        }
+
+        .vm-column {
+            padding: 80px 40px;
+            transition: background 0.4s ease;
+        }
+
+        /* Responsive Vertical Divider */
+        @media (min-width: 768px) {
+            .border-divider {
+                border-right: 1px solid #e0e0e0;
+            }
+        }
+
+        /* Typography */
+        .brand-label {
+            color: var(--brand-accent);
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .vm-title {
+            font-family: 'Playfair Display', serif;
+            font-weight: 500;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .vm-text {
+            color: var(--text-muted);
+            max-width: 380px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #eee;
+            border-radius: 50%;
+            transition: all 0.5s ease;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            animation: fadeInUp 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+        }
+
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.5s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Subtle Hover Effect */
+        .vm-column:hover .icon-box {
+            border-color: var(--brand-accent);
+            transform: rotateY(180deg);
+        }
