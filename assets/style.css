@@ -1360,7 +1360,7 @@ svg {
   .vm-container {
             min-height: 400px;
             border: 1px solid #f0f0f0;
-            background-image: url(/bg-pattern.jpg);
+            background-image: url(https://ajmera.com/wp-content/themes/ajmera/assets/images/ajmera-bg-pattern.jpg);
         }
 
         .vm-column {
