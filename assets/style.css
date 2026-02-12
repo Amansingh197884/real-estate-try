@@ -22,7 +22,7 @@ body {
     transition: 0.3s;
 }
 .nav-item .nav-link{
-    color: #000 !important;
+    color: #000000 !important;
     font-weight: 510;
 }
 .nav-item .nav-link:hover{
@@ -33,10 +33,13 @@ body {
 
 /* Navbar Styling */
 .navbar {
-    background: white;
+    background: #fff;
     padding: 15px 0;
+    border-bottom: 1px solid #5a59593f;
 }
-
+/* .navbar-color{
+    background-color: #fff !important;
+} */
 .nav-link {
   
     padding: 0 10px !important;
