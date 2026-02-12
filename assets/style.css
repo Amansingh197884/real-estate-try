@@ -651,9 +651,13 @@ svg {
             font-weight: 600;
         }
 .btn-subscribe:hover{
-    background-color: var(--brand-gold);
+    background-color: #c5a059;
 }
-   
+   @media screen and (max-width:785px){
+     .btn-subscribe{
+        align-items: start !important;
+     }
+   }
         .footer-link {
             text-decoration: none;
             color: #ffffff;
@@ -1151,31 +1155,33 @@ svg {
             padding-top: 50px;
             padding-bottom: 50px;
         }
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.gallery-container .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: var(--bs-nav-pills-link-active-color);
-    background-color: #FDCB00 !important;
+    background-color: var(--navy) !important;
+    color: #fff !important;
 }
         /* --- GALLERY TABS STYLING --- */
-        .nav-pills .nav-link {
+       .gallery-container .nav-pills .nav-link {
             color: #333;
-            border-radius: 0.5rem;
+            border-radius: 50px;
             margin: 0 5px;
             transition: all 0.3s ease;
+            padding: 10px 40px !important;
         }
 
-        .nav-pills .nav-link.active, 
-        .nav-pills .nav-link:hover {
+       .gallery-container .nav-pills .nav-link.active, 
+       .gallery-container .nav-pills .nav-link:hover {
             background-color: #a87e5b; 
-            color: white;
+            color: rgb(255, 255, 255) !important;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .nav-pills .nav-link {
+       .gallery-container .nav-pills .nav-link {
             padding: 0.5rem 1rem;
             font-weight: 500;
         }
         
-        .nav-pills {
+      .gallery-container  .nav-pills {
             display: flex;
             justify-content: center;
             margin-bottom: 3rem;
