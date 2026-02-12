@@ -51,7 +51,7 @@ body {
 /* Hero Styling */
 .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url('/images/2hero.jpg');
+          url('../images/skyscrapers-sunset.jpg');
     background-size: cover;
     background-position: center;
     height: 95vh;
