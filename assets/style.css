@@ -1675,3 +1675,22 @@ svg {
            @media (max-width: 1100px) {
             .nav-btnn { display: none !important; } 
         }
+        @media screen and (max-width:990px){
+            #nav-small{
+                align-items: start !important;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            .nav-item .nav-link{
+                 margin-top: 10px !important;
+                margin-bottom: 10px !important;
+                font-size: 20px;
+            }
+            .nav-link{
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+            .on{
+                display: none;
+            }
+        }
