@@ -263,7 +263,7 @@ svg {
         .project-card {
             border: 1px solid var(--light-border);
             transition: all 0.4s ease;
-            background: #fff;
+            background: url(/bg-pattern.jpg);
             cursor: pointer;
             overflow: hidden;
             border-radius: 10px;
@@ -1138,7 +1138,7 @@ svg {
 
         @media (max-width: 768px) {
             .About-us .hero-content h1 {
-                font-size: 3rem; 
+                font-size: 2rem; 
                 letter-spacing: 0.2rem;
             }
 
@@ -1237,7 +1237,7 @@ svg {
             margin-bottom: 3rem;
             color: #333;
             letter-spacing: 2px;
-            text-transform: uppercase;
+            /* text-transform: uppercase; */
         }
 
         /* Responsive Columns for better mobile view */
@@ -1567,16 +1567,16 @@ svg {
         }
 
        .testimonial-section .section-header h2 {
-            font-family: 'Playfair Display', serif;
+            /* font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
-            color: var(--primary-navy);
+            color: var(--primary-navy); */
         }
 
         /* Swiper Container Adjustments */
-       .testimonial-section .swiper {
+       /* .testimonial-section .swiper {
             width: 100%;
             padding: 20px 0 50px 0;
-        }
+        } */
 
       .testimonial-section  .testimonial-wrapper {
             max-width: 900px;
@@ -1596,11 +1596,11 @@ svg {
     text-align: left;
     min-height: 422px;
     position: relative;
-    padding: 20px;
+    padding: 60px;
     margin: 0;
     background: #fff;
     /* box-shadow: 0 0 15px 0 rgba(0, 0, 0, .3); */
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+/* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
         }
 
       .testimonial-section  .quote-mark {
@@ -1658,7 +1658,7 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
 
        .testimonial-section .nav-btnn:hover {
-            background: var(--accent-coral);
+            background: rgb(216, 25, 25);
             color: white;
             border-color: var(--accent-coral);
         }
@@ -1666,11 +1666,12 @@ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     .testimonial-section    .prev-el { left: -70px; }
     .testimonial-section    .next-el { right: -70px; }
 
-        /* @media (max-width: 1100px) {
-            .nav-btn { display: none; }
-        } */
+       
 
         @media (max-width: 768px) {
          .testimonial-section   .testimonial-card { padding: 30px; }
          .testimonial-section   .section-header h2 { font-size: 1.8rem; }
+        }
+           @media (max-width: 1100px) {
+            .nav-btnn { display: none !important; } 
         }
