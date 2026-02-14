@@ -668,7 +668,7 @@ svg {
             margin-bottom: 8px;
             font-size: 0.95rem;
         }
-        .footer-link:hover { color: var(--brand-gold); }
+        .footer-link:hover { color: var(--gold) !important; }
 
         .social-link {
             text-decoration: none;
@@ -679,7 +679,13 @@ svg {
             margin-bottom: 8px;
         }
         .social-link:hover{
-            color: var(--brand-gold);
+                        color: var(--gold);
+            
+        }
+        .social-link i:hover{
+                        /* transform: rotateY(360deg); */
+                        color: var(--gold);
+
         }
 
         .legal-text { font-size: 0.8rem; color: #ffffff; }
@@ -1694,3 +1700,66 @@ svg {
                 display: none;
             }
         }
+
+
+       
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+       .Terms-of-Service .sticky-sidebar {
+            position: sticky;
+            top: 40px;
+            height: fit-content;
+            max-height: 80vh;
+            overflow-y: auto;
+            animation: fadeInLeft 1s ease-out;
+            scrollbar-width: thin;
+        }
+
+       .Terms-of-Service .nav-link {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding: 10px 15px;
+            border-left: 3px solid transparent;
+            transition: all 0.2s ease-in-out;
+        }
+
+       .Terms-of-Service .nav-link:hover, .nav-link.active {
+            color: var(--primary-color);
+            border-left: 3px solid var(--primary-color);
+            background: #fff;
+            font-weight: 600;
+        }
+
+      .Terms-of-Service  .content-card {
+            background: #ffffff;
+            border: 1px solid #edf2f7;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-radius: 16px;
+            padding: 45px;
+            margin-bottom: 35px;
+            transition: transform 0.3s ease;
+            animation: slideUp 0.7s ease-out both;
+        }
+
+      .Terms-of-Service  .content-card:hover {
+            transform: translateY(-5px);
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+      .Terms-of-Service  h2 { font-weight: 800; margin-bottom: 25px; color: var(--text-dark); font-size: 1.75rem; }
+      .Terms-of-Service  p { line-height: 1.8; color: #475569; font-size: 1.05rem; }
+       .Terms-of-Service ul li { margin-bottom: 12px; color: #475569; }
+
+        .content-card:nth-child(n) { animation-delay: calc(0.1s * var(--i)); }
+
+        @media (max-width: 992px) {
+          .Terms-of-Service  .sticky-sidebar { position: relative; top: 0; margin-bottom: 40px; max-height: none; }
+        }       
