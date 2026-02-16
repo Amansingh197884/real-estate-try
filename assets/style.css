@@ -1399,6 +1399,11 @@ hr {
     background-color: #7b5b42;
     border-color: #7b5b42;
 }
+@media screen and (max-width:992px){
+.gallery-overlay{
+    display: none;
+}
+}
 
 /* btn  */
 
