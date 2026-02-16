@@ -3,209 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Testimonial Slider</title>
+    <title>Ultimate Animated Landing Page</title>
     
+    <link href="https://cdn.示范.com/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <style>
         :root {
-            --primary-navy: #1a2a6c;
-            --accent-coral: #ff5e62;
-            --text-gray: #555;
-            --bg-light: #fdfdfd;
+            --primary: #6366f1;
+            --secondary: #ec4899;
+            --dark: #0f172a;
+            --glass: rgba(255, 255, 255, 0.1);
         }
 
-        body {
-            background-color: var(--bg-light);
-            font-family: 'Inter', sans-serif;
-            color: #333;
-        }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; background: #fdfdfd; }
 
-        .testimonial-section {
-            padding: 80px 0;
-        }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 5px; }
 
-        .section-header h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--primary-navy);
-        }
+        section { padding: 120px 0; border-bottom: 1px solid #f0f0f0; }
 
-        .swiper {
-            width: 100%;
-            padding: 20px 0 50px 0;
-        }
-
-        .testimonial-wrapper {
-            max-width: 900px;
-            margin: 0 auto;
+        /* --- Custom Button Animations --- */
+        .btn-animate {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
-        }
-
-        /* The Card Design */
-        .testimonial-card {
-            background: #fff;
-            padding: 50px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-            border-radius: 4px;
-            text-align: left;
-            position: relative;
-        }
-
-        .quote-mark {
-            font-size: 60px;
-            color: var(--primary-navy);
-            line-height: 1;
-            margin-bottom: 10px;
-            font-family: 'Playfair Display', serif;
-            opacity: 0.2;
-        }
-
-        .testimonial-text {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            color: var(--text-gray);
-            margin-bottom: 30px;
-        }
-
-        .author-name {
-            color: var(--accent-coral);
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-
-        .author-role {
-            font-size: 0.85rem;
-            color: #999;
+            overflow: hidden;
+            border-radius: 50px;
             font-weight: 600;
+            padding: 12px 35px;
         }
 
-        /* Navigation Styling */
-        .nav-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50px;
-            height: 50px;
-            border: 1px solid #ddd;
+        .btn-animate:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        /* --- Card Hover Animations --- */
+        .hover-card {
+            transition: all 0.4s ease;
+            border: none;
+            border-radius: 20px;
             background: white;
-            border-radius: 50%;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .hover-card:hover {
+            transform: translateY(-15px) rotate(2deg);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+        }
+
+        /* --- Section Specialties --- */
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #6366f1, #0f172a);
+            color: white;
+            min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 10;
-            transition: 0.3s;
-            color: var(--accent-coral);
         }
 
-        .nav-btn:hover {
-            background: var(--accent-coral);
-            color: white;
-            border-color: var(--accent-coral);
+        .image-reveal {
+            overflow: hidden;
+            border-radius: 20px;
         }
 
-        .prev-el { left: -70px; }
-        .next-el { right: -70px; }
-
-        @media (max-width: 1100px) {
-            .nav-btn { display: none; } 
+        .image-reveal img {
+            transition: transform 1.5s ease;
         }
 
-        @media (max-width: 768px) {
-            .testimonial-card { padding: 30px; }
-            .section-header h2 { font-size: 1.8rem; }
+        .image-reveal:hover img {
+            transform: scale(1.2);
         }
     </style>
 </head>
 <body>
 
-<section class="testimonial-section">
-    <div class="container">
-        
-        <div class="section-header text-center mb-5">
-            <p class="text-uppercase small fw-bold text-muted mb-2">Resident Reviews</p>
-            <h2>What Our Clients Say</h2>
-            <div class="mx-auto mt-3" style="width: 50px; height: 3px; background: var(--accent-coral);"></div>
-        </div>
-
-        <div class="testimonial-wrapper">
-            <div class="nav-btn prev-el">&#10229;</div>
-            <div class="nav-btn next-el">&#10230;</div>
-
-            <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                    
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="quote-mark">“</div>
-                            <p class="testimonial-text">
-                                Living at The Grand Horizon has been a transformative experience. The floor-to-ceiling windows offer a view that is simply unmatched. Everything from the concierge service to the smart-home integration makes daily life feel effortless and luxurious.
-                            </p>
-                            <div class="author-info">
-                                <h5 class="author-name">Marcus & Sarah Jenkins</h5>
-                                <p class="author-role">RESIDENTS OF PHASE II (ARCHITECTURAL DESIGNERS)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="quote-mark">“</div>
-                            <p class="testimonial-text">
-                                The proximity to the financial district is a game changer for my career. I've cut my commute by 40 minutes, giving me more time to enjoy the olympic-sized pool and the private gym. It's truly a sanctuary in the heart of the city.
-                            </p>
-                            <div class="author-info">
-                                <h5 class="author-name">David Richardson</h5>
-                                <p class="author-role">RESIDENT OF SKYLINE TOWER (INVESTMENT BANKER)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="swiper-slide">
-                        <div class="testimonial-card">
-                            <div class="quote-mark">“</div>
-                            <p class="testimonial-text">
-                                We were looking for a place that was safe for our children but didn't compromise on modern aesthetics. The community parks and the 24/7 security here provided exactly that. It's not just a flat; it's a neighborhood.
-                            </p>
-                            <div class="author-info">
-                                <h5 class="author-name">The Kapoor Family</h5>
-                                <p class="author-role">RESIDENTS OF GREEN VALLEY (ENTREPRENEURS)</p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="swiper-pagination"></div>
+    <nav class="navbar navbar-expand-lg sticky-top bg-white shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">BEYOND.UI</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto gap-3">
+                    <li class="nav-item"><a class="nav-link fw-semibold" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="btn btn-primary btn-animate text-white" href="#">Get Started</a></li>
+                </ul>
             </div>
         </div>
-    </div>
-</section>
+    </nav>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <section class="hero-gradient text-center">
+        <div class="container" data-aos="zoom-out" data-aos-duration="1500">
+            <span class="badge bg-secondary mb-3 px-3 py-2 rounded-pill">V 2.0 Launch</span>
+            <h1 class="display-2 fw-bold mb-4">Experience Fluid Motion</h1>
+            <p class="lead mb-5 opacity-75">12 sections of pure Bootstrap power with unique scroll triggers.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-primary btn-animate">Start Trial</button>
+                <button class="btn btn-outline-light btn-animate">Watch Video</button>
+            </div>
+        </div>
+    </section>
 
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        loop: true,
-        spaceBetween: 30,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        navigation: {
-            nextEl: ".next-el",
-            prevEl: ".prev-el",
-        },
-    });
-</script>
+    <section id="features">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="fw-bold">Section 03: core Features</h2>
+                <div class="mx-auto bg-primary" style="height:3px; width:60px;"></div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="hover-card p-5 text-center">
+                        <div class="display-4 text-primary mb-3">🚀</div>
+                        <h4>Lightning Fast</h4>
+                        <p class="text-muted">Optimized code for high-speed browsing.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="hover-card p-5 text-center">
+                        <div class="display-4 text-primary mb-3">🛡️</div>
+                        <h4>Secure Design</h4>
+                        <p class="text-muted">Built with modern security standards.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="hover-card p-5 text-center">
+                        <div class="display-4 text-primary mb-3">🎨</div>
+                        <h4>Customizable</h4>
+                        <p class="text-muted">Change colors and themes instantly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section class="bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="image-reveal shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800" class="img-fluid" alt="code">
+                    </div>
+                </div>
+                <div class="col-md-6 ps-md-5" data-aos="fade-left">
+                    <h2 class="fw-bold mt-4">Section 04: Development</h2>
+                    <p class="my-4">This section demonstrates the <strong>fade-right</strong> and <strong>fade-left</strong> combination. Perfect for explaining complex products.</p>
+                    <button class="btn btn-dark btn-animate">Read Documentation</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5" data-aos="zoom-in">Section 05: Flip Effects</h2>
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="flip-up">
+                    <div class="p-5 bg-dark text-white rounded-4 h-100">
+                        <h3>Starter</h3>
+                        <p class="display-4 fw-bold">$0</p>
+                        <ul class="list-unstyled my-4 opacity-75">
+                            <li>1 Project</li>
+                            <li>Community Support</li>
+                        </ul>
+                        <button class="btn btn-outline-light btn-animate">Join Free</button>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="flip-down">
+                    <div class="p-5 bg-primary text-white rounded-4 h-100">
+                        <h3>Enterprise</h3>
+                        <p class="display-4 fw-bold">$99</p>
+                        <ul class="list-unstyled my-4">
+                            <li>Unlimited Projects</li>
+                            <li>Priority Support</li>
+                        </ul>
+                        <button class="btn btn-light btn-animate">Go Pro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-primary text-white">
+        <div class="container text-center" data-aos="zoom-out-up">
+            <div class="row g-4">
+                <div class="col-md-3"><h1>10M</h1><p>Downloads</p></div>
+                <div class="col-md-3"><h1>500+</h1><p>Components</p></div>
+                <div class="col-md-3"><h1>24/7</h1><p>Monitoring</p></div>
+                <div class="col-md-3"><h1>100%</h1><p>Uptime</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid overflow-hidden">
+            <h2 class="text-center fw-bold mb-5" data-aos="fade-down">Section 07: Horizontal Slide</h2>
+            <div class="row flex-nowrap g-3">
+                <div class="col-8 col-md-3" data-aos="slide-left" data-aos-delay="100"><div class="bg-secondary p-5 rounded-4 text-white">Project A</div></div>
+                <div class="col-8 col-md-3" data-aos="slide-left" data-aos-delay="200"><div class="bg-info p-5 rounded-4 text-white">Project B</div></div>
+                <div class="col-8 col-md-3" data-aos="slide-left" data-aos-delay="300"><div class="bg-warning p-5 rounded-4 text-white">Project C</div></div>
+                <div class="col-8 col-md-3" data-aos="slide-left" data-aos-delay="400"><div class="bg-danger p-5 rounded-4 text-white">Project D</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5">Section 08: Team Stagger</h2>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                    <div class="bg-white p-4 rounded-circle mx-auto shadow" style="width:150px; height:150px"></div>
+                    <h5 class="mt-3">John Doe</h5>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-white p-4 rounded-circle mx-auto shadow" style="width:150px; height:150px"></div>
+                    <h5 class="mt-3">Jane Smith</h5>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="bg-white p-4 rounded-circle mx-auto shadow" style="width:150px; height:150px"></div>
+                    <h5 class="mt-3">Alex Reed</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="bg-dark text-white p-5 rounded-5" data-aos="zoom-in-right">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h2>Section 09: Dynamic Reveal</h2>
+                        <p class="opacity-75">Notice how this whole block zooms in from the right side.</p>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <button class="btn btn-secondary btn-animate">Action Here</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-light">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5" data-aos="fade-down">Section 10: Flip Services</h2>
+            <div class="row g-4">
+                <div class="col-md-3" data-aos="flip-left" data-aos-delay="100"><div class="card p-4 hover-card">SEO</div></div>
+                <div class="col-md-3" data-aos="flip-left" data-aos-delay="200"><div class="card p-4 hover-card">PPC</div></div>
+                <div class="col-md-3" data-aos="flip-left" data-aos-delay="300"><div class="card p-4 hover-card">UI/UX</div></div>
+                <div class="col-md-3" data-aos="flip-left" data-aos-delay="400"><div class="card p-4 hover-card">Coding</div></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container text-center" data-aos="zoom-in-down">
+            <h2 class="fw-bold mb-4">Section 11: Feedback</h2>
+            <div class="col-md-8 mx-auto">
+                <p class="fs-4 fst-italic">"The most smooth and responsive template I have ever used. The animations are top-notch!"</p>
+                <p class="fw-bold text-primary mt-3">- Happy Customer</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center" data-aos="fade-up">
+            <h2 class="fw-bold mb-4">Section 12: Contact Us</h2>
+            <p class="mb-5">Follow us on social media for more updates.</p>
+            <div class="d-flex justify-content-center gap-4 mb-5">
+                <a href="#" class="text-white">Twitter</a>
+                <a href="#" class="text-white">LinkedIn</a>
+                <a href="#" class="text-white">Github</a>
+            </div>
+            <p class="small text-muted">&copy; 2026 BEYOND.UI | Developed with AOS & Bootstrap</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: false, 
+            mirror: true,
+            anchorPlacement: 'top-center',
+        });
+    </script>
 </body>
 </html>
