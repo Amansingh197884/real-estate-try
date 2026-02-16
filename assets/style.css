@@ -372,13 +372,14 @@ svg {
     justify-content: center;
     align-items: center;
     margin-bottom: 30px;
+    padding: 10px;
 }
 
 .diamond-card {
     background-color: rgba(255, 255, 255, 0.9);
     width: 320px;
     height: 320px;
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -386,7 +387,8 @@ svg {
     transition: all 0.4s ease;
     text-align: center;
     color: #5d4037;
-    border-radius: 20px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .diamond-card:hover {
