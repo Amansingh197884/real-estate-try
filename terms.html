@@ -25,12 +25,13 @@
    
 
 <!-- 2 -->
- <nav class="navbar navbar-expand-lg  fixed-top shadow-lg h-20 p-2">
+  <nav class="navbar navbar-expand-lg  fixed-top  h-20 p-2">
         <div class="container-fluid ">
             <!-- logo -->
 
             <div class="logo">
-                <img src="images/logoimg.png" width="150px" alt="">
+                <a href="index.html"><img src="images/logoimg.png" width="150px" alt="">
+                </a>
                 <!-- <h5>Aajneeti</h5> -->
             </div>
             <!-- navbar-toggler -->
@@ -43,18 +44,18 @@
             <!-- sidebar -->
             <div style="background-color: rgb(255, 255, 255)" class="offcanvas offcanvas-end" tabindex=""
                 id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div style="border-bottom: 2px solid #F26722;" class="offcanvas-header text-dark">
+                <div style="border-bottom: 2px solid #000000;" class="offcanvas-header text-dark">
                     <div class=" d-flex align-items-center logo">
-                        <img class="" src="Image/logo.png" alt="">
+                        <img class="" src="images/logoimg.png" alt="" style="width: 100px !important;">
 
                     </div>
-                    <button type="button" class="btn-close btn-close-white shadow-none border-0"
+                    <button type="button" class="btn-close btn-close-dark shadow-none border-0"
                         data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <!-- sidebar -->
                 <div class="offcanvas-body justify-content-end  ayush">
                     <ul id="nav-small"
-                        class="navbar-nav justify-content-end  fs-8  flex-grow-1 pe-1 align-items-center ayush">
+                        class="navbar-nav justify-content-center  fs-8  flex-grow-1 pe-1 align-items-center ayush">
                         <li class="nav-item mx-2 ">
                             <a class="nav-link " aria-current="page" href="index.html">Home</a>
                         </li>
@@ -62,7 +63,7 @@
 
 
                         <li class="nav-item mx-2">
-                            <a class="nav-link  " href="about.html">About Us</a>
+                            <a class="nav-link  " href="project.html">Projects</a>
                         </li>
 
                         <!-- <li class="nav-item mx-2">
@@ -74,21 +75,24 @@
                         </li>
 
                         <li class="nav-item mx-2">
-                            <a class="nav-link  " href="contact.html">Contact</a>
+                            <a class="nav-link  " href="about.html">About Us</a>
                         </li>
 
 
                         <li class="nav-item mx-2">
                             <a class="nav-link  " href="blog.html">Blog</a>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="#">
-                                <div style="border-bottom: 1.5px solid red; font-size: 20px;"><i
-                                        class="fas fa-phone-alt me-1 text-primary"></i> +91-1324546787</div>
-                            </a></li>
+
+                        <li class="nav-item mx-2">
+                            <a class="nav-link  " href="contact.html">Contact Us</a>
+                        </li>
+                      
 
 
                     </ul>
-
+                                <div style="border-bottom: 1.5px solid #c5a059; font-size: 20px; " class="on"><i
+                                        class="fas fa-phone-alt me-1 " style="color: #c5a059 !important;"></i>
+                                    +91-1324546787</div>
                 </div>
             </div>
         </div>
@@ -96,13 +100,13 @@
 
 <!-- navbar end  -->
    <section class="About-us">
-        <header class="hero-section container-fluid d-flex justify-content-center align-items-center">
+        <header class="hero-section container-fluid d-flex justify-content-center align-items-center" style="background-image: url(https://i.pinimg.com/1200x/49/3b/63/493b63e13b5729ba5b170f920b226568.jpg) !important;">
             <div class="hero-content text-center">
                 <h1 class="display-1 text-white fw-bold mb-4">INTERIOR TRENDS</h1>
 
                 <div class="btn-group hero-btn-group" role="group" aria-label="Login and Sign Up buttons">
                     <a class="btn hero-btn log-in-btn" href="index.html">HOME</a>
-                    <button type="button" class="btn hero-btn sign-up-btn">Blog</button>
+                    <button type="button" class="btn hero-btn sign-up-btn">Terms of Service</button>
                 </div>
             </div>
         </header>
@@ -111,8 +115,9 @@
  <main class="container my-5 Terms-of-Service">
         <div class="row">
             <div class="col-lg-3">
-                <nav class="sticky-sidebar nav flex-column p-2">
-                    <h6 class="text-uppercase fw-bold small text-muted mb-3 px-3">Table of Contents</h6>
+                                    <h6 class="text-uppercase fw-bold small  mb-3 px-4" style="color: #063465 !important;">Table of Contents</h6>
+
+                <nav class="sticky-sidebar nav justify-content-between">
                     <a class="nav-link" href="#introduction">1. Introduction</a>
                     <a class="nav-link" href="#intellectual">2. Intellectual Property</a>
                     <a class="nav-link" href="#accounts">3. User Accounts</a>
@@ -121,7 +126,6 @@
                     <a class="nav-link" href="#liability">6. Limitation of Liability</a>
                     <a class="nav-link" href="#governing">7. Governing Law</a>
                     <a class="nav-link" href="#changes">8. Changes to Terms</a>
-                    <a class="nav-link" href="#contact">9. Contact Us</a>
                 </nav>
             </div>
 
@@ -173,15 +177,7 @@
                     <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect.</p>
                 </section>
 
-                <section id="contact" class="content-card" style="--i:9">
-                    <h2>9. Contact Us</h2>
-                    <p>Questions about the Terms of Service should be sent to us at:</p>
-                    <div class="mt-4 p-4 rounded bg-light border-start border-primary border-4">
-                        <p class="mb-1"><strong>Email:</strong> legal@example.com</p>
-                        <p class="mb-1"><strong>Phone:</strong> +1 (555) 000-0000</p>
-                        <p class="mb-0"><strong>Location:</strong> 101 Innovation Way, Tech City</p>
-                    </div>
-                </section>
+              
                 
             </div>
         </div>
