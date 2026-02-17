@@ -1915,3 +1915,155 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    border-radius: 16px;
     }
 }
 
+/* convert css start  */
+ .mainn-container {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.7s forwards;
+            padding-top: 50px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    border-radius: 16px;
+            margin-top: 50px;
+
+        }
+
+        @keyframes slideUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .converter-card {
+            background: var(--glass-bg);
+            border-radius: 28px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+            padding: 45px;
+            transition: var(--transition);
+        }
+
+       .mainn-container .header-text h1 {
+            font-weight: 800;
+            font-size: 2.4rem;
+            margin-bottom: 35px;
+            color: #0f172a;
+        }
+
+       .mainn-container .header-text span {
+            color: var(--primary-blue);
+        }
+
+       .mainn-container .form-label {
+            font-weight: 700;
+            color: #64748b;
+            font-size: 0.8rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+       .mainn-container .custom-input {
+            border: 2px solid #f1f5f9;
+            border-radius: 14px;
+            padding: 15px;
+            font-weight: 600;
+            background: #f8fafc;
+            transition: var(--transition);
+        }
+
+      .mainn-container  .custom-input:focus {
+            border-color: var(--primary-blue);
+            background: #fff;
+            box-shadow: 0 0 0 5px rgba(0, 98, 255, 0.08);
+        }
+
+      .mainn-container  .swap-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 32px;
+        }
+
+       .btn-swap {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gold);
+            border: 2px solid #f1f5f9;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-swap:hover {
+            transform: rotate(180deg) scale(1.1) !important;
+            background: var(--navy);
+            color: #fff;
+        }
+
+       .mainn-container .result-field {
+            background: #f1f5f9 !important;
+            border: 2px dashed #606264;
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        /* Flash Animation on Convert */
+        @keyframes flashHighlight {
+            0% { background-color: #dbeafe; }
+            100% { background-color: #f1f5f9; }
+        }
+
+        .animate-flash {
+            animation: flashHighlight 0.6s ease-out;
+        }
+
+        /* Convert Button */
+      .mainn-container  .btn-convert {
+            background: var(--gold);
+            color: white;
+            border: none;
+            padding: 18px;
+            border-radius: 15px;
+            font-weight: 800;
+            width: 100%;
+            margin-top: 35px;
+            transition: var(--transition);
+            letter-spacing: 1px;
+        }
+
+       .mainn-container .btn-convert:hover {
+            background: var(--navy);
+            /* transform: translateY(-3px); */
+            box-shadow: 0 15px 30px -5px rgba(0, 98, 255, 0.3);
+            transition: 0.32s;
+        }
+
+        .btn-convert:active {
+            transform: translateY(0);
+        }
+
+        /* Content Section */
+       .mainn-container .info-box {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            margin-top: 50px;
+            border: 1px solid #e2e8f0;
+        }
+
+       .mainn-container .info-box a {
+            color: var(--navy);
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+       .mainn-container .info-box a:hover {
+            text-decoration: underline;
+        }
+
+         .details h3 { font-family: 'Playfair Display', serif;
+        font-size: 40px;
+    color: #fff; }
+       
