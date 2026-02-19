@@ -2145,7 +2145,6 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    border-radius: 16px;
             margin-bottom: 15px;
         }
 
-        /* Floor Plan Section */
        .property-details .floor-plan-img {
             filter: grayscale(1);
             transition: 0.5s;
