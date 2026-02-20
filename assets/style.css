@@ -2297,5 +2297,8 @@ box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;    border-radius: 16px;
        .blogdetails .table-luxury { border-collapse: separate; border-spacing: 0 10px; }
        .blogdetails .table-luxury tr { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border-radius: 10px; }
 
-
+.all-type img{
+    height: 500px;
+    width: 100%;
+}
        
