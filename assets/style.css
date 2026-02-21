@@ -455,10 +455,24 @@ h2.main-title {
     .diamond-card {
         width: 380px;
         height: 380px;
-        padding: 45px;
+        padding: 15px !important;
     }
+    .diamond-card p{
+        font-size: 0.65rem;
+    }
+    .gallery-title{
+        font-size: 1.8rem !important;
+    }
+    .itam-no2{
+        font-size: 0.87rem;
+    }
+    .nice{
+    padding: 0.05rem !important;
 }
-
+}
+.nice{
+    padding: 1.5rem;
+}
 @media (max-width: 576px) {
     h2.main-title {
         font-size: 1.8rem;
