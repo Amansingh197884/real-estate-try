@@ -2584,6 +2584,7 @@ svg {
     .tracking-wider{
         color: #fcc100;
         font-size: 20px;
+        margin-top: 20px;
     }
     .pulse-ring:nth-child(2) { animation-delay: -0.5s; }
 
