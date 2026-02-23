@@ -16,14 +16,21 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="shortcut icon" href="images/panoramia.png" type="image/x-icon">
-            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
 </head>
 
 <body style="overflow-x: hidden;">
 
+    <div id="preloader">
+        <div class="pulse-container">
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring mb-5"></div>
+            <p class="mt-5 pt-5 fw-bold  text-uppercase tracking-wider">Loading...</p>
 
+        </div>
+    </div>
 
     <!-- <nav class="navbar navbar-expand-lg sticky-top bg-white">
         <div class="container">
@@ -57,8 +64,8 @@
     </nav> -->
 
 
-<!-- 2 -->
-  <nav class="navbar navbar-expand-lg  fixed-top  h-20 p-2">
+    <!-- 2 -->
+    <nav class="navbar navbar-expand-lg  fixed-top  h-20 p-2">
         <div class="container-fluid ">
             <!-- logo -->
 
@@ -119,21 +126,22 @@
                         <li class="nav-item mx-2">
                             <a class="nav-link  " href="contact.html">Contact Us</a>
                         </li>
-                      
+
 
 
                     </ul>
-                                <div style="border-bottom: 1.5px solid #c5a059; font-size: 20px; " class="on"><i
-                                        class="fas fa-phone-alt me-1 " style="color: #c5a059 !important;"></i>
-                                    +91-1324546787</div>
+                    <div style="border-bottom: 1.5px solid #c5a059; font-size: 20px; " class="on"><i
+                            class="fas fa-phone-alt me-1 " style="color: #c5a059 !important;"></i>
+                        +91-1324546787</div>
                 </div>
             </div>
         </div>
     </nav>
 
-<!-- navbar end  -->
-   <section class="About-us">
-        <header class="hero-section container-fluid d-flex justify-content-center align-items-center" style="background-image: url(https://i.pinimg.com/1200x/03/ac/f3/03acf307a695c9f3d8035448d67df4bc.jpg) !important; background-position: center;">
+    <!-- navbar end  -->
+    <section class="About-us">
+        <header class="hero-section container-fluid d-flex justify-content-center align-items-center"
+            style="background-image: url(https://i.pinimg.com/1200x/03/ac/f3/03acf307a695c9f3d8035448d67df4bc.jpg) !important; background-position: center;">
             <div class="hero-content text-center animate__animated animate__zoomIn">
                 <h1 class="display-1 text-white fw-bold mb-4">INTERIOR TRENDS</h1>
 
@@ -146,7 +154,7 @@
     </section>
 
 
-      <!-- new  -->
+    <!-- new  -->
     <section class="bg-color-op-1 mt-5 mb-5 pt-5">
         <div class="container-fluid">
             <div class="row g-4 align-items-center">
@@ -191,7 +199,8 @@
 
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="">
-                        <img src="https://i.pinimg.com/736x/c3/ee/d1/c3eed1fea02e121f16740e216e59784a.jpg" class="w-100   rounded-1 ">
+                        <img src="https://i.pinimg.com/736x/c3/ee/d1/c3eed1fea02e121f16740e216e59784a.jpg"
+                            class="w-100   rounded-1 ">
                     </div>
                 </div>
             </div>
@@ -205,7 +214,7 @@
 
 
     <!-- new  -->
-      <!-- <section class="contact-section mt-5 mb-5 pt-5 pb-5">
+    <!-- <section class="contact-section mt-5 mb-5 pt-5 pb-5">
         <div class="container-fluid">
             <div class="row align-items-center">
 
@@ -247,7 +256,7 @@
         </div>
     </section> -->
     <!-- footer  -->
-  <div class="container-fluid mt-5 mb-5 pt-5">
+    <div class="container-fluid mt-5 mb-5 pt-5">
         <h1 class="gallery-title">Contact us</h1>
         <div class="row g-4 justify-content-center pt-3">
             <div class="col-md-6" data-aos="fade-right">
@@ -287,7 +296,7 @@
 
 
                     <!-- <button class="">Login</button> -->
-                      <div class="col-md-6">
+                    <div class="col-md-6">
                         <button class="btn-search"><i class="fa fa-search me-2"></i> SEARCH PROPERTY</button>
                     </div>
                 </form>
@@ -297,56 +306,61 @@
     <!-- map  -->
 
 
-         <footer class="footer-section">
-    <div class="container">
-        <div class="row gy-4 justify-content-between">
-            
-            <div class="col-lg-6 col-md-12">
-                <div class="footer-logo">Real Estate</div>
-                <p class="mb-4">Join our newsletter to stay up to date on features and releases.</p>
-                
-                <form class="newsletter-form d-flex flex-column flex-sm-row gap-3 align-items-start align-items-sm-center">
-                    <div class="flex-grow-1 w-100">
-                        <input type="email" style="color: #fff !important;" class="form-control" placeholder="Enter your email*" aria-label="Email">
-                    </div>
-                    <button class="btn btn-subscribe px-5" type="button">Send</button>
-                </form>
-                
-                <p class="legal-text mt-3">
-                    By subscribing you agree to with our <a href="privacy.html" class="text-white">Privacy Policy</a> and provide consent to receive updates from our company.
-                </p>
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row gy-4 justify-content-between">
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="footer-logo">Real Estate</div>
+                    <p class="mb-4">Join our newsletter to stay up to date on features and releases.</p>
+
+                    <form
+                        class="newsletter-form d-flex flex-column flex-sm-row gap-3 align-items-start align-items-sm-center">
+                        <div class="flex-grow-1 w-100">
+                            <input type="email" style="color: #fff !important;" class="form-control"
+                                placeholder="Enter your email*" aria-label="Email">
+                        </div>
+                        <button class="btn btn-subscribe px-5" type="button">Send</button>
+                    </form>
+
+                    <p class="legal-text mt-3">
+                        By subscribing you agree to with our <a href="privacy.html" class="text-white">Privacy
+                            Policy</a> and provide consent to receive updates from our company.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-6 ps-lg-5">
+                    <h6 class="fw-bold mb-3">Our Menu</h6>
+                    <a href="about.html" class="footer-link">About us</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                    <a href="gallery.html" class="footer-link">Gallery</a>
+                    <a href="contact.html" class="footer-link">Contact us</a>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="fw-bold mb-3">Follow Us</h6>
+                    <a href="https://www.facebook.com" class="social-link"><i class="fab fa-facebook-f"></i>
+                        Facebook</a>
+                    <a href="https://www.instagram.com" class="social-link"><i class="fab fa-instagram"></i>
+                        Instagram</a>
+                    <a href="https://www.X.com" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="https://in.linkedin.com" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
             </div>
 
-            <div class="col-lg-2 col-6 ps-lg-5">
-                <h6 class="fw-bold mb-3">Our Menu</h6>
-                <a href="about.html" class="footer-link">About us</a>
-                <a href="blog.html" class="footer-link">Blog</a>
-                <a href="gallery.html" class="footer-link">Gallery</a>
-                <a href="contact.html" class="footer-link">Contact us</a>
-            </div>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="legal-text">©2026, All right reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
 
-            <div class="col-lg-2 col-6">
-                <h6 class="fw-bold mb-3">Follow Us</h6>
-                <a href="https://www.facebook.com" class="social-link"><i class="fab fa-facebook-f"></i> Facebook</a>
-                <a href="https://www.instagram.com" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="https://www.X.com" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="https://in.linkedin.com" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
             </div>
         </div>
-
-        <hr>
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                <span class="legal-text">©2026, All right reserved.</span>
-            </div>
-            <div class="col-md-6 text-center text-md-end bottom-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-               
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- <a href="https://wa.me/919149429296" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
@@ -672,7 +686,18 @@
         };
     </script>
     <!-- jQuery -->
-             <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="assets/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/app.js"></script>
+
+    <script>
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("preloader");
+            setTimeout(() => {
+                loader.classList.add("loader-hidden");
+            }, 1000);
+        });
+    </script>
+
     <body>
-        </html>
+
+</html>

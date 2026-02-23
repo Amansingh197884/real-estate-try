@@ -24,7 +24,14 @@
 <body style="overflow-x: hidden;">
 
 
+    <div id="preloader">
+        <div class="pulse-container">
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring mb-5"></div>
+            <p class="mt-5 pt-5 fw-bold  text-uppercase tracking-wider">Loading...</p>
 
+        </div>
+    </div>
     <!-- <nav class="navbar navbar-expand-lg sticky-top bg-white">
         <div class="container">
             <div class="logo">
@@ -933,6 +940,15 @@
     <!-- jQuery -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="assets/app.js"></script>
+
+    <script>
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("preloader");
+            setTimeout(() => {
+                loader.classList.add("loader-hidden");
+            }, 1000);
+        });
+    </script>
 
     <body>
 

@@ -15,6 +15,16 @@
 </head>
 
 <body>
+    <div id="preloader">
+        <div class="pulse-container">
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring mb-5"></div>
+            <p class="mt-5 pt-5 fw-bold  text-uppercase tracking-wider">Loading...</p>
+
+        </div>
+    </div>
+
+
     <nav class="navbar navbar-expand-lg  fixed-top  h-20 p-2">
         <div class="container-fluid ">
             <!-- logo -->
@@ -103,7 +113,7 @@
         </header>
     </section>
 
-  <!-- 2 -->
+    <!-- 2 -->
     <div class="container-fluid blog-newr mt-5">
         <div class="row align-items-center mb-5">
             <div class="col-8">
@@ -551,10 +561,10 @@
 
 
 
-  
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="assets/app.js"></script>
     <script>
         var swiper = new Swiper(".blogSlider", {
             slidesPerView: 1,
@@ -570,13 +580,20 @@
             }
         });
 
-        // Swiper height fix jab text open ho
         document.querySelectorAll('.collapse').forEach(el => {
             el.addEventListener('shown.bs.collapse', () => swiper.update());
             el.addEventListener('hidden.bs.collapse', () => swiper.update());
         });
     </script>
 
+    <script>
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("preloader");
+            setTimeout(() => {
+                loader.classList.add("loader-hidden");
+            }, 1000);
+        });
+    </script>
 </body>
 
 </html>

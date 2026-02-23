@@ -16,19 +16,26 @@
     <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="shortcut icon" href="images/panoramia.png" type="image/x-icon">
-            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
 </head>
 
-<body >
+<body>
+
+    <div id="preloader">
+        <div class="pulse-container">
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring mb-5"></div>
+            <p class="mt-5 pt-5 fw-bold  text-uppercase tracking-wider">Loading...</p>
+
+        </div>
+    </div>
 
 
 
- 
-
-<!-- 2 -->
-   <nav class="navbar navbar-expand-lg  fixed-top  h-20 p-2">
+    <!-- 2 -->
+    <nav class="navbar navbar-expand-lg  fixed-top  h-20 p-2">
         <div class="container-fluid ">
             <!-- logo -->
 
@@ -89,21 +96,22 @@
                         <li class="nav-item mx-2">
                             <a class="nav-link  " href="contact.html">Contact Us</a>
                         </li>
-                      
+
 
 
                     </ul>
-                                <div style="border-bottom: 1.5px solid #c5a059; font-size: 20px; " class="on"><i
-                                        class="fas fa-phone-alt me-1 " style="color: #c5a059 !important;"></i>
-                                    +91-1324546787</div>
+                    <div style="border-bottom: 1.5px solid #c5a059; font-size: 20px; " class="on"><i
+                            class="fas fa-phone-alt me-1 " style="color: #c5a059 !important;"></i>
+                        +91-1324546787</div>
                 </div>
             </div>
         </div>
     </nav>
 
-<!-- navbar end  -->
-   <section class="About-us">
-        <header class="hero-section container-fluid d-flex justify-content-center align-items-center" style="background-image: url(https://i.pinimg.com/1200x/c9/79/c0/c979c085b4af82da4112c73ab350b483.jpg) !important;">
+    <!-- navbar end  -->
+    <section class="About-us">
+        <header class="hero-section container-fluid d-flex justify-content-center align-items-center"
+            style="background-image: url(https://i.pinimg.com/1200x/c9/79/c0/c979c085b4af82da4112c73ab350b483.jpg) !important;">
             <div class="hero-content text-center animate__animated animate__zoomIn">
                 <h1 class="display-1 text-white fw-bold mb-4">Acre / Hectare</h1>
 
@@ -114,85 +122,94 @@
             </div>
         </header>
     </section>
-<!-- calculation -->
-<div class="container mainn-container pb-5">
-    <div class="row justify-content-center">
-        <div class="col-lg-10">
-            
-            <div class="header-text text-center">
-                <h1>Acre to <span>Hectare</span></h1>
-            </div>
+    <!-- calculation -->
+    <div class="container mainn-container pb-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
 
-            <div class="converter-card">
-                <div class="row g-4 align-items-center">
-                    
-                    <div class="col-md-5">
-                        <label class="form-label">Value</label>
-                        <input type="number" id="inputVal" class="form-control custom-input" placeholder="Enter amount">
-                        
-                        <div class="mt-4">
-                            <label class="form-label">From Unit</label>
-                            <select id="fromUnit" class="form-select custom-input">
-                                <option value="katha">Katha (katha)</option>
-                                <option value="acre">Acre (ac)</option>
-                                <option value="hectare">Hectare (ha)</option>
-                                <option value="bigha">Bigha (bigha)</option>
-                                <option value="sqft">Square Feet (sq ft)</option>
-                                <option value="sqm">Square Meter (sq m)</option>
-                                <option value="sqyd">Square Yard (sq yd)</option>
-                                <option value="cent">Cent (cent)</option>
-                                <option value="decimal">Decimal (decimal)</option>
-                                <option value="dhur">Dhur (dhur)</option>
-                                <option value="marla">Marla (marla)</option>
-                                <option value="sqcm">Square Centimeter (sq cm)</option>
-                                <option value="sqin">Square Inch (sq in)</option>
-                                <option value="sqkm">Square Kilometer (sq km)</option>
-                                <option value="sqmi">Square Mile (sq mi)</option>
-                            </select>
-                        </div>
-                    </div>
+                <div class="header-text text-center">
+                    <h1>Acre to <span>Hectare</span></h1>
+                </div>
 
-                    <div class="col-md-2">
-                        <div class="swap-wrapper">
-                            <div class="btn-swap" onclick="swapUnits()">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m7 16 3 3 3-3"/><path d="M10 5v14"/><path d="m20 8-3-3-3 3"/><path d="M17 19V5"/></svg>
+                <div class="converter-card">
+                    <div class="row g-4 align-items-center">
+
+                        <div class="col-md-5">
+                            <label class="form-label">Value</label>
+                            <input type="number" id="inputVal" class="form-control custom-input"
+                                placeholder="Enter amount">
+
+                            <div class="mt-4">
+                                <label class="form-label">From Unit</label>
+                                <select id="fromUnit" class="form-select custom-input">
+                                    <option value="katha">Katha (katha)</option>
+                                    <option value="acre">Acre (ac)</option>
+                                    <option value="hectare">Hectare (ha)</option>
+                                    <option value="bigha">Bigha (bigha)</option>
+                                    <option value="sqft">Square Feet (sq ft)</option>
+                                    <option value="sqm">Square Meter (sq m)</option>
+                                    <option value="sqyd">Square Yard (sq yd)</option>
+                                    <option value="cent">Cent (cent)</option>
+                                    <option value="decimal">Decimal (decimal)</option>
+                                    <option value="dhur">Dhur (dhur)</option>
+                                    <option value="marla">Marla (marla)</option>
+                                    <option value="sqcm">Square Centimeter (sq cm)</option>
+                                    <option value="sqin">Square Inch (sq in)</option>
+                                    <option value="sqkm">Square Kilometer (sq km)</option>
+                                    <option value="sqmi">Square Mile (sq mi)</option>
+                                </select>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-5">
-                        <label class="form-label">Result</label>
-                        <input type="text" id="resultVal" class="form-control custom-input result-field" readonly placeholder="Final result">
-                        
-                        <div class="mt-4">
-                            <label class="form-label">To Unit</label>
-                            <select id="toUnit" class="form-select custom-input">
-                                <option value="cent">Cent (cent)</option>
-                                <option value="acre">Acre (ac)</option>
-                                <option value="hectare">Hectare (ha)</option>
-                                <option value="bigha">Bigha (bigha)</option>
-                                <option value="sqft">Square Feet (sq ft)</option>
-                                <option value="sqm">Square Meter (sq m)</option>
-                                <option value="sqyd">Square Yard (sq yd)</option>
-                                <option value="decimal">Decimal (decimal)</option>
-                                <option value="dhur">Dhur (dhur)</option>
-                                <option value="katha">Katha (katha)</option>
-                                <option value="marla">Marla (marla)</option>
-                                <option value="sqcm">Square Centimeter (sq cm)</option>
-                                <option value="sqin">Square Inch (sq in)</option>
-                                <option value="sqkm">Square Kilometer (sq km)</option>
-                                <option value="sqmi">Square Mile (sq mi)</option>
-                            </select>
+                        <div class="col-md-2">
+                            <div class="swap-wrapper">
+                                <div class="btn-swap" onclick="swapUnits()">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="m7 16 3 3 3-3" />
+                                        <path d="M10 5v14" />
+                                        <path d="m20 8-3-3-3 3" />
+                                        <path d="M17 19V5" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5">
+                            <label class="form-label">Result</label>
+                            <input type="text" id="resultVal" class="form-control custom-input result-field" readonly
+                                placeholder="Final result">
+
+                            <div class="mt-4">
+                                <label class="form-label">To Unit</label>
+                                <select id="toUnit" class="form-select custom-input">
+                                    <option value="cent">Cent (cent)</option>
+                                    <option value="acre">Acre (ac)</option>
+                                    <option value="hectare">Hectare (ha)</option>
+                                    <option value="bigha">Bigha (bigha)</option>
+                                    <option value="sqft">Square Feet (sq ft)</option>
+                                    <option value="sqm">Square Meter (sq m)</option>
+                                    <option value="sqyd">Square Yard (sq yd)</option>
+                                    <option value="decimal">Decimal (decimal)</option>
+                                    <option value="dhur">Dhur (dhur)</option>
+                                    <option value="katha">Katha (katha)</option>
+                                    <option value="marla">Marla (marla)</option>
+                                    <option value="sqcm">Square Centimeter (sq cm)</option>
+                                    <option value="sqin">Square Inch (sq in)</option>
+                                    <option value="sqkm">Square Kilometer (sq km)</option>
+                                    <option value="sqmi">Square Mile (sq mi)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12">
+                            <button class="btn-convert" onclick="performConversion()">CONVERT NOW</button>
                         </div>
                     </div>
-
-                    <div class="col-12 col-sm-12">
-                        <button class="btn-convert" onclick="performConversion()">CONVERT NOW</button>
-                    </div>
                 </div>
-            </div>
 
-            <!-- <div class="info-box shadow-sm">
+                <!-- <div class="info-box shadow-sm">
                 <h5 class="fw-bold mb-4">Table of Contents</h5>
                 <ul class="list-unstyled">
                     <li class="mb-3"><a href="#" class="text-decoration-none">1. Trending Acre to Hectare Conversions</a></li>
@@ -202,36 +219,38 @@
                 </ul>
             </div> -->
 
+            </div>
         </div>
     </div>
-</div>
 
 
-<!-- calculation -->
- <main class="container my-5 Terms-of-Service">
+    <!-- calculation -->
+    <main class="container my-5 Terms-of-Service">
         <div class="row">
             <div class="col-lg-3">
-                                    <h6 class="text-uppercase fw-bold small  mb-3 px-4" style="color: #063465 !important;">Table of Contents</h6>
+                <h6 class="text-uppercase fw-bold small  mb-3 px-4" style="color: #063465 !important;">Table of Contents
+                </h6>
 
                 <nav class="sticky-sidebar nav justify-content-between">
                     <a class="nav-link" href="#introduction">1. Trending Acre to Hectare Conversions</a>
                     <a class="nav-link" href="#intellectual">2. How to convert Acre to Hectare</a>
                     <a class="nav-link" href="#accounts">3. About Acre
-</a>
+                    </a>
                     <a class="nav-link" href="#accounts">4. About Hectare</a>
                     <a class="nav-link" href="#privacy">5. Difference between Acre to Hectare</a>
-                  
+
                 </nav>
             </div>
 
             <div class="col-lg-9">
-                
+
                 <section id="introduction" class="content-card" style="--i:1">
                     <h3>Trending Acre to Hectare Conversions</h3>
-                    <p class="lead">1 acre is approximately equal to 0.405 Hectare. Here we list trending acre to Hectare conversions:
+                    <p class="lead">1 acre is approximately equal to 0.405 Hectare. Here we list trending acre to
+                        Hectare conversions:
 
-</p>
-                      <div class="card conversion-card" data-aos="fade-up">
+                    </p>
+                    <div class="card conversion-card" data-aos="fade-up">
                         <div class="card-body p-0">
                             <table class="table table-custom table-hover m-0">
                                 <thead>
@@ -241,102 +260,130 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>2 Acre</td><td>0.809 Hectare</td></tr>
-                                    <tr><td>5 Acre</td><td>2.023 Hectare</td></tr>
-                                    <tr><td>10 Acre</td><td>4.047 Hectare</td></tr>
-                                    <tr><td>15 Acre</td><td>6.07 Hectare</td></tr>
-                                    <tr><td>20 Acre</td><td>8.094 Hectare</td></tr>
-                                    <tr><td>50 Acre</td><td>20.234 Hectare</td></tr>
-                                    <tr><td>100 Acre</td><td>40.469 Hectare</td></tr>
+                                    <tr>
+                                        <td>2 Acre</td>
+                                        <td>0.809 Hectare</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5 Acre</td>
+                                        <td>2.023 Hectare</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10 Acre</td>
+                                        <td>4.047 Hectare</td>
+                                    </tr>
+                                    <tr>
+                                        <td>15 Acre</td>
+                                        <td>6.07 Hectare</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20 Acre</td>
+                                        <td>8.094 Hectare</td>
+                                    </tr>
+                                    <tr>
+                                        <td>50 Acre</td>
+                                        <td>20.234 Hectare</td>
+                                    </tr>
+                                    <tr>
+                                        <td>100 Acre</td>
+                                        <td>40.469 Hectare</td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-                    </section>
+                </section>
 
                 <section id="intellectual" class="content-card" style="--i:2">
-                   <div class="row align-items-center" data-aos="fade-up">
-                <div class="col-md-6">
-                    <h2 class="fw-bold mb-4">How to convert <span class="gold-text">Acre to Hectare</span></h2>
-                    <p>To convert 1 Acre to Hectare, you just need to multiply the unit with 0.405. This is vital for real estate professionals comparing property sizes globally.</p>
-                    <div class="formula-box my-4">
-                        <h4 class="fw-bold">Formula:</h4>
-                        <p class="h5">Hectare = (Acre) × 0.405</p>
+                    <div class="row align-items-center" data-aos="fade-up">
+                        <div class="col-md-6">
+                            <h2 class="fw-bold mb-4">How to convert <span class="gold-text">Acre to Hectare</span></h2>
+                            <p>To convert 1 Acre to Hectare, you just need to multiply the unit with 0.405. This is
+                                vital for real estate professionals comparing property sizes globally.</p>
+                            <div class="formula-box my-4">
+                                <h4 class="fw-bold">Formula:</h4>
+                                <p class="h5">Hectare = (Acre) × 0.405</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card p-4 border-0 shadow-sm">
+                                <h5 class="fw-bold text-success">Example:</h5>
+                                <p>If you have 5 acres of land:</p>
+                                <code>5 × 0.405 = 2.025 Hectares</code>
+                                <p class="mt-2 mb-0 small text-muted">Therefore, a 5-acre plot is approx 2.023 Hectares.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card p-4 border-0 shadow-sm">
-                        <h5 class="fw-bold text-success">Example:</h5>
-                        <p>If you have 5 acres of land:</p>
-                        <code>5 × 0.405 = 2.025 Hectares</code>
-                        <p class="mt-2 mb-0 small text-muted">Therefore, a 5-acre plot is approx 2.023 Hectares.</p>
-                    </div>
-                </div>
-            </div>
-                   </section>
+                </section>
 
                 <section id="accounts" class="content-card" style="--i:3">
-                   <h2 class="text-center fw-bold mb-5" data-aos="fade-down">Difference Between Units</h2>
-            <div class="row g-4">
-                <div class="col-md-6" data-aos="flip-left">
-                    <div class="p-4 border rounded-4 bg-white shadow-sm h-100">
-                        <h3 class="gold-text">About Acre</h3>
-                        <ul class="list-unstyled mt-3">
-                            <li><strong>1 Acre:</strong> 43,560 sq ft</li>
-                            <li><strong>1 Acre:</strong> 4,047 sq mt</li>
-                            <li><strong>1 Acre:</strong> 0.404 Hectares</li>
-                        </ul>
-                        <p class="small">Standardized unit in Imperial Systems (USA, UK).</p>
+                    <h2 class="text-center fw-bold mb-5" data-aos="fade-down">Difference Between Units</h2>
+                    <div class="row g-4">
+                        <div class="col-md-6" data-aos="flip-left">
+                            <div class="p-4 border rounded-4 bg-white shadow-sm h-100">
+                                <h3 class="gold-text">About Acre</h3>
+                                <ul class="list-unstyled mt-3">
+                                    <li><strong>1 Acre:</strong> 43,560 sq ft</li>
+                                    <li><strong>1 Acre:</strong> 4,047 sq mt</li>
+                                    <li><strong>1 Acre:</strong> 0.404 Hectares</li>
+                                </ul>
+                                <p class="small">Standardized unit in Imperial Systems (USA, UK).</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="flip-right">
+                            <div class="p-4 border rounded-4 bg-white shadow-sm h-100">
+                                <h3 class="gold-text">About Hectare</h3>
+                                <ul class="list-unstyled mt-3">
+                                    <li><strong>1 Hectare:</strong> 2.471 Acres</li>
+                                    <li><strong>1 Hectare:</strong> 107,639 sq ft</li>
+                                    <li><strong>1 Hectare:</strong> 10,000 sq mt</li>
+                                </ul>
+                                <p class="small">Standard metric unit (India, Europe, Australia).</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6" data-aos="flip-right">
-                    <div class="p-4 border rounded-4 bg-white shadow-sm h-100">
-                        <h3 class="gold-text">About Hectare</h3>
-                        <ul class="list-unstyled mt-3">
-                            <li><strong>1 Hectare:</strong> 2.471 Acres</li>
-                            <li><strong>1 Hectare:</strong> 107,639 sq ft</li>
-                            <li><strong>1 Hectare:</strong> 10,000 sq mt</li>
-                        </ul>
-                        <p class="small">Standard metric unit (India, Europe, Australia).</p>
-                    </div>
-                </div>
-            </div>  </section>
+                </section>
 
-              
+
 
                 <section id="privacy" class="content-card" style="--i:5">
-                   <h2 class="text-center fw-bold mb-5">Frequently Asked Questions</h2>
-            <div class="accordion  mx-auto" id="faqAccordion">
-                <div class="accordion-item" data-aos="fade-up">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
-                            What is 1 Acre vs Hectare?
-                        </button>
-                    </h2>
-                    <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            1 Acre is roughly 0.405 hectares, whereas 1 Hectare is roughly 2.47 acres.
+                    <h2 class="text-center fw-bold mb-5">Frequently Asked Questions</h2>
+                    <div class="accordion  mx-auto" id="faqAccordion">
+                        <div class="accordion-item" data-aos="fade-up">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#q1">
+                                    What is 1 Acre vs Hectare?
+                                </button>
+                            </h2>
+                            <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    1 Acre is roughly 0.405 hectares, whereas 1 Hectare is roughly 2.47 acres.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item" data-aos="fade-up">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#q2">
+                                    How many Katha is 1 Acre?
+                                </button>
+                            </h2>
+                            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    The measurement of Katha varies by state, but generally, 1 acre contains approx 32
+                                    units of Katha in many regions.
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="accordion-item" data-aos="fade-up">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
-                            How many Katha is 1 Acre?
-                        </button>
-                    </h2>
-                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            The measurement of Katha varies by state, but generally, 1 acre contains approx 32 units of Katha in many regions.
-                        </div>
-                    </div>
-                </div>
-            </div>   </section>
+                </section>
 
-             
 
-              
-                
+
+
+
             </div>
         </div>
     </main>
@@ -344,56 +391,61 @@
 
 
 
-  <footer class="footer-section">
-    <div class="container">
-        <div class="row gy-4 justify-content-between">
-            
-            <div class="col-lg-6 col-md-12">
-                <div class="footer-logo">Real Estate</div>
-                <p class="mb-4">Join our newsletter to stay up to date on features and releases.</p>
-                
-                <form class="newsletter-form d-flex flex-column flex-sm-row gap-3 align-items-start align-items-sm-center">
-                    <div class="flex-grow-1 w-100">
-                        <input type="email" style="color: #fff !important;" class="form-control" placeholder="Enter your email*" aria-label="Email">
-                    </div>
-                    <button class="btn btn-subscribe px-5" type="button">Send</button>
-                </form>
-                
-                <p class="legal-text mt-3">
-                    By subscribing you agree to with our <a href="privacy.html" class="text-white">Privacy Policy</a> and provide consent to receive updates from our company.
-                </p>
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row gy-4 justify-content-between">
+
+                <div class="col-lg-6 col-md-12">
+                    <div class="footer-logo">Real Estate</div>
+                    <p class="mb-4">Join our newsletter to stay up to date on features and releases.</p>
+
+                    <form
+                        class="newsletter-form d-flex flex-column flex-sm-row gap-3 align-items-start align-items-sm-center">
+                        <div class="flex-grow-1 w-100">
+                            <input type="email" style="color: #fff !important;" class="form-control"
+                                placeholder="Enter your email*" aria-label="Email">
+                        </div>
+                        <button class="btn btn-subscribe px-5" type="button">Send</button>
+                    </form>
+
+                    <p class="legal-text mt-3">
+                        By subscribing you agree to with our <a href="privacy.html" class="text-white">Privacy
+                            Policy</a> and provide consent to receive updates from our company.
+                    </p>
+                </div>
+
+                <div class="col-lg-2 col-6 ps-lg-5">
+                    <h6 class="fw-bold mb-3">Our Menu</h6>
+                    <a href="about.html" class="footer-link">About us</a>
+                    <a href="blog.html" class="footer-link">Blog</a>
+                    <a href="gallery.html" class="footer-link">Gallery</a>
+                    <a href="contact.html" class="footer-link">Contact us</a>
+                </div>
+
+                <div class="col-lg-2 col-6">
+                    <h6 class="fw-bold mb-3">Follow Us</h6>
+                    <a href="https://www.facebook.com" class="social-link"><i class="fab fa-facebook-f"></i>
+                        Facebook</a>
+                    <a href="https://www.instagram.com" class="social-link"><i class="fab fa-instagram"></i>
+                        Instagram</a>
+                    <a href="https://www.X.com" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="https://in.linkedin.com" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
             </div>
 
-            <div class="col-lg-2 col-6 ps-lg-5">
-                <h6 class="fw-bold mb-3">Our Menu</h6>
-                <a href="about.html" class="footer-link">About us</a>
-                <a href="blog.html" class="footer-link">Blog</a>
-                <a href="gallery.html" class="footer-link">Gallery</a>
-                <a href="contact.html" class="footer-link">Contact us</a>
-            </div>
+            <hr>
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="legal-text">©2026, All right reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-end bottom-links">
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
 
-            <div class="col-lg-2 col-6">
-                <h6 class="fw-bold mb-3">Follow Us</h6>
-                <a href="https://www.facebook.com" class="social-link"><i class="fab fa-facebook-f"></i> Facebook</a>
-                <a href="https://www.instagram.com" class="social-link"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="https://www.X.com" class="social-link"><i class="fab fa-twitter"></i> Twitter</a>
-                <a href="https://in.linkedin.com" class="social-link"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
             </div>
         </div>
-
-        <hr>
-        <div class="row align-items-center">
-            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                <span class="legal-text">©2026, All right reserved.</span>
-            </div>
-            <div class="col-md-6 text-center text-md-end bottom-links">
-                <a href="privacy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-               
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- <a href="https://wa.me/919149429296" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
@@ -441,58 +493,58 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script>
-    const conversionFactors = {
-        sqft: 1,
-        katha: 726,          
-        cent: 435.6,         
-        acre: 43560,
-        hectare: 107639.1,
-        bigha: 14400,        
-        dhur: 36.3,
-        sqm: 10.76391,
-        sqyd: 9,
-        decimal: 435.6,
-        marla: 272.25,
-        sqcm: 0.00107639,
-        sqin: 0.00694444,
-        sqkm: 10763910.4,
-        sqmi: 27878400
-    };
+    <script>
+        const conversionFactors = {
+            sqft: 1,
+            katha: 726,
+            cent: 435.6,
+            acre: 43560,
+            hectare: 107639.1,
+            bigha: 14400,
+            dhur: 36.3,
+            sqm: 10.76391,
+            sqyd: 9,
+            decimal: 435.6,
+            marla: 272.25,
+            sqcm: 0.00107639,
+            sqin: 0.00694444,
+            sqkm: 10763910.4,
+            sqmi: 27878400
+        };
 
-    function performConversion() {
-        const valueField = document.getElementById('inputVal');
-        const resultDisplay = document.getElementById('resultVal');
-        const val = parseFloat(valueField.value);
-        const from = document.getElementById('fromUnit').value;
-        const to = document.getElementById('toUnit').value;
+        function performConversion() {
+            const valueField = document.getElementById('inputVal');
+            const resultDisplay = document.getElementById('resultVal');
+            const val = parseFloat(valueField.value);
+            const from = document.getElementById('fromUnit').value;
+            const to = document.getElementById('toUnit').value;
 
-        if (isNaN(val) || valueField.value === "") {
-            alert("Please enter a numeric value.");
-            return;
+            if (isNaN(val) || valueField.value === "") {
+                alert("Please enter a numeric value.");
+                return;
+            }
+
+            const inSqFt = val * conversionFactors[from];
+            const result = inSqFt / conversionFactors[to];
+
+            resultDisplay.classList.remove('animate-flash');
+            void resultDisplay.offsetWidth;
+            resultDisplay.classList.add('animate-flash');
+
+            resultDisplay.value = result.toLocaleString(undefined, {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 6
+            });
         }
 
-        const inSqFt = val * conversionFactors[from];
-        const result = inSqFt / conversionFactors[to];
-
-        resultDisplay.classList.remove('animate-flash');
-        void resultDisplay.offsetWidth; 
-        resultDisplay.classList.add('animate-flash');
-
-        resultDisplay.value = result.toLocaleString(undefined, {
-            minimumFractionDigits: 0,
-            maximumFractionDigits: 6
-        });
-    }
-
-    function swapUnits() {
-        const from = document.getElementById('fromUnit');
-        const to = document.getElementById('toUnit');
-        const temp = from.value;
-        from.value = to.value;
-        to.value = temp;
-    }
-</script>
+        function swapUnits() {
+            const from = document.getElementById('fromUnit');
+            const to = document.getElementById('toUnit');
+            const temp = from.value;
+            from.value = to.value;
+            to.value = temp;
+        }
+    </script>
 
 
     <script>
@@ -756,8 +808,7 @@
                     const animClass = entry.target.getAttribute('data-anim');
                     entry.target.classList.add('animate__animated', animClass);
                     entry.target.style.opacity = "1";
-                    // Once animated, no need to observe again (optional)
-                    // scrollObserver.unobserve(entry.target); 
+
                 }
             });
         }, observerOptions);
@@ -773,7 +824,17 @@
         };
     </script>
     <!-- jQuery -->
-             <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="assets/app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/app.js"></script>
+    <script>
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("preloader");
+            setTimeout(() => {
+                loader.classList.add("loader-hidden");
+            }, 1000);
+        });
+    </script>
+
     <body>
-        </html>
+
+</html>

@@ -25,7 +25,14 @@
 
 
 
+    <div id="preloader">
+        <div class="pulse-container">
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring mb-5"></div>
+            <p class="mt-5 pt-5 fw-bold  text-uppercase tracking-wider">Loading...</p>
 
+        </div>
+    </div>
 
     <!-- 2 -->
     <nav class="navbar navbar-expand-lg  fixed-top  h-20 p-2">
@@ -223,15 +230,18 @@
                     <h3 class="fw-bold mb-4">Area Accessibility</h3>
                     <table class="table table-luxury">
                         <tr>
-                            <td> <img class="img-fluid me-2" src="images/man-walking.png" width="27px" alt=""> Walk Score</td>
+                            <td> <img class="img-fluid me-2" src="images/man-walking.png" width="27px" alt=""> Walk
+                                Score</td>
                             <td class="text-end fw-bold">98/100</td>
                         </tr>
                         <tr>
-                            <td> <img class="img-fluid me-2" src="images/cycling.png" width="27px" alt=""> Bike Score</td>
+                            <td> <img class="img-fluid me-2" src="images/cycling.png" width="27px" alt=""> Bike Score
+                            </td>
                             <td class="text-end fw-bold">85/100</td>
                         </tr>
                         <tr>
-                            <td> <img class="img-fluid me-2" src="images/train-station.png" width="27px" alt=""> Transit Score</td>
+                            <td> <img class="img-fluid me-2" src="images/train-station.png" width="27px" alt=""> Transit
+                                Score</td>
                             <td class="text-end fw-bold">92/100</td>
                         </tr>
                     </table>
@@ -259,18 +269,15 @@
                 </section>
 
                 <div class="ratio ratio-16x9 rounded-4 overflow-hidden mb-5 shadow-lg">
-  <video width="1119" height="1081"
-                class="lazy-video  embed-responsive-item responsive-video d-none-1 d-sm-block-1" loop="" muted=""
-                autoplay="autoplay" playsinline="">
-                <source
-                    data-src="https://www.pexels.com/download/video/7578552/"
-                    type="video/mp4"
-                    src="https://www.pexels.com/download/video/7578552/">
-                <source
-                    data-src="https://www.pexels.com/download/video/7578552/"
-                    type="video/ogg"
-                    src="https://www.pexels.com/download/video/7578552/">
-            </video>                </div>
+                    <video width="1119" height="1081"
+                        class="lazy-video  embed-responsive-item responsive-video d-none-1 d-sm-block-1" loop=""
+                        muted="" autoplay="autoplay" playsinline="">
+                        <source data-src="https://www.pexels.com/download/video/7578552/" type="video/mp4"
+                            src="https://www.pexels.com/download/video/7578552/">
+                        <source data-src="https://www.pexels.com/download/video/7578552/" type="video/ogg"
+                            src="https://www.pexels.com/download/video/7578552/">
+                    </video>
+                </div>
 
                 <section class="mb-5 p-4 border-start border-warning border-4 bg-light">
                     <p class="fst-italic fs-5">"This penthouse redefined my expectations of urban living. The attention
@@ -361,7 +368,8 @@
 
                     <div class="p-4 border rounded-4 text-center">
                         <h6>Download PDF Catalog</h6>
-                        <button class="btn btn-danger btn-sm"  data-bs-toggle="modal" data-bs-target="#enquiryModal">Download .PDF (12MB)</button>
+                        <button class="btn btn-danger btn-sm" data-bs-toggle="modal"
+                            data-bs-target="#enquiryModal">Download .PDF (12MB)</button>
                     </div>
                 </div>
             </div>
@@ -762,6 +770,15 @@
             coverflowEffect: { rotate: 50, stretch: 0, depth: 200, modifier: 1, slideShadows: true },
             pagination: { el: ".swiper-pagination" },
             autoplay: { delay: 3000 }
+        });
+    </script>
+
+    <script>
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("preloader");
+            setTimeout(() => {
+                loader.classList.add("loader-hidden");
+            }, 1000);
         });
     </script>
 
