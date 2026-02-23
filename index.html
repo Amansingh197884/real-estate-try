@@ -20,7 +20,14 @@
 </head>
 
 <body style="overflow-x: hidden;">
+ <div id="preloader">
+         <div class="pulse-container">
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring mb-5"></div>
+            <p class="mt-5 pt-5 fw-bold  text-uppercase tracking-wider">Loading...</p>
 
+    </div>
+    </div>
     <nav class="navbar navbar-expand-lg  fixed-top  h-20 p-2">
         <div class="container-fluid ">
             <!-- logo -->
@@ -1219,30 +1226,8 @@
             );
         });
     </script>
-    <script>
-        // Minimal Intersection Observer to toggle .in-view on scroll
-        const revealables = document.querySelectorAll('.fade-up');
-        const io = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                    // Uncomment below if you want it to animate every time it re-enters
-                    // else keep it once-only:
-                    obs.unobserve(entry.target);
-                }
-            });
-        }, { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+ 
 
-        revealables.forEach(el => io.observe(el));
-    </script>
-
-    <script>
-        window.onload = function () {
-            document.getElementById('preloader').style.display = "none"
-            document.getElementById('landing').style.display = "block"
-
-        };
-    </script>
 
 
     <!-- jQuery -->
@@ -1381,6 +1366,16 @@
     </script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="assets/app.js"></script>
+   
+     <script>
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("preloader");
+            // Small delay so you can actually see the animation
+            setTimeout(() => {
+                loader.classList.add("loader-hidden");
+            }, 1000); 
+        });
+    </script>
 </body>
 
 </html>

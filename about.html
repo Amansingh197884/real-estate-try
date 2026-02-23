@@ -4,25 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real estate </title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Real Estate </title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
     <link rel="shortcut icon" href="images/panoramia.png" type="image/x-icon">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-                <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
 </head>
 
 <body style="overflow-x: hidden;">
+<div id="preloader">
+    <div class="pulse-container">
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring"></div>
+            <p class="mt-5 pt-5 fw-bold text-primary text-uppercase tracking-wider">Loading...</p>
 
+    </div>
+</div>
 
 
     <!-- <nav class="navbar navbar-expand-lg sticky-top bg-white">
@@ -153,7 +157,7 @@
 
             <div class="row g-0 vm-container shadow-sm">
 
-                <div class="col-md-6 vm-column border-divider text-center"  >
+                <div class="col-md-6 vm-column border-divider text-center" data-aos="fade-right">
                     <div class="d-flex justify-content-center">
                         <div class="icon-boxx">
                             <img src="images/our-vision.png" alt="">
@@ -537,23 +541,7 @@
 
     <!-- jQuery -->
 
-    <script>
-        $(document).ready(function () {
-            $('.popup-gallery').magnificPopup({
-                delegate: 'a',
-                type: 'image',
-                gallery: {
-                    enabled: true
-                },
-                titleSrc: 'title'
-            });
-        });
-    </script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"
-        integrity="sha512-gmwBmiTVER57N3jYS3LinA9eb8aHrJua5iQD7yqYCKa5x6Jjc7VDVaEA0je0Lu0bP9j7tEjV3+1qUm6loO99Kw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+ 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
@@ -581,113 +569,13 @@
 
     <!-- ddcd -->
     <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiperr", {
-            watchSlidesProgress: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            // slidesPerView: 3,
-            spaceBetween: 20,
-            loop: true,
-            breakpoints: {
-                1200: {
-                    slidesPerView: 1,
-                    //   spaceBetween: 20,
-                },
-
-
-            },
-
-
-        });
-    </script>
-    <script>
-        var swiper = new Swiper(".mySwiperrr", {
-            watchSlidesProgress: true,
-            // slidesPerView: 3,
-            pagination: {
-                // el: '.swiper-pagination',
-                // clickable: true,
-            },
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            spaceBetween: 20,
-            loop: true,
-            breakpoints: {
-                // when window width is >= 320px (Mobile)
-                320: {
-                    slidesPerView: 1,
-                    slidesPerGroup: 1,
-                },
-                // when window width is >= 576px (Small screens / Tablet)
-                576: {
-                    slidesPerView: 2,
-                    slidesPerGroup: 2,
-                },
-                // when window width is >= 992px (Desktop)
-                992: {
-                    slidesPerView: 3,
-                    slidesPerGroup: 3,
-                }
-            }
-        });
-
-    </script>
+    
 
     <!-- <script src="https://code.jquery.com/jquery-3.7.1.js"></script> -->
 
-    <script>
-        jQuery(function ($) {
-            var $navbar = $('.navbar');
-            $(window).scroll(function (event) {
-                var $current = $(this).scrollTop();
-                if ($current > 0) {
-                    $navbar.addClass('navbar-color');
-
-                }
-                else {
-                    $navbar.removeClass('navbar-color');
-                }
-            }
-            );
-        });
-    </script>
-    <script>
-        jQuery(function ($) {
-            var $navbar = $('.navbar');
-            $(window).scroll(function (event) {
-                var $current = $(this).scrollTop();
-                if ($current > 0) {
-                    $navbar.addClass('navbar-color');
-
-                }
-                else {
-                    $navbar.removeClass('navbar-color');
-                }
-            }
-            );
-        });
-    </script>
-    <script>
-        // Minimal Intersection Observer to toggle .in-view on scroll
-        const revealables = document.querySelectorAll('.fade-up');
-        const io = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                    // Uncomment below if you want it to animate every time it re-enters
-                    // else keep it once-only:
-                    obs.unobserve(entry.target);
-                }
-            });
-        }, { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
-
-        revealables.forEach(el => io.observe(el));
-    </script>
+  
+  
+   
 
     <script>
         window.onload = function () {
@@ -704,39 +592,12 @@
 
     <!-- Magnific Popup JS -->
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <!-- Magnific Popup JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $(".popup-link").magnificPopup({
-                type: "image",
-                gallery: {
-                    enabled: true,
-                }
-            });
-        });
-
-
-
-
-    </script>
-    <script>
-        $(document).ready(function () {
-            $(".popup-link").magnificPopup({
-                type: "image",
-                gallery: {
-                    enabled: true,
-                }
-            });
-        });
-
-
-
-
-    </script>
+ 
+ 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
 
@@ -771,62 +632,19 @@
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-        // 1. Loader Logic
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('preloader').style.display = 'none';
-            }, 1500);
-        });
-
-        // 2. Advanced Scroll Observer (For 10+ Sections)
-        const observerOptions = {
-            threshold: 0.15 // Trigger when 15% of section is visible
-        };
-
-        const scrollObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const animClass = entry.target.getAttribute('data-anim');
-                    entry.target.classList.add('animate__animated', animClass);
-                    entry.target.style.opacity = "1";
-                    // Once animated, no need to observe again (optional)
-                    // scrollObserver.unobserve(entry.target); 
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach(el => {
-            scrollObserver.observe(el);
-        });
-
-        window.onscroll = function () {
-            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-                console.log("AJAX Action: Loading more content...");
-            }
-        };
-    </script>
+  
     <!-- jQuery -->
-    <script>
-        var swiper = new Swiper(".mySwipern", {
-            loop: true,
-            spaceBetween: 30,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".next-el",
-                prevEl: ".prev-el",
-            },
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/app.js"></script>
+
+          <script>
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("preloader");
+            setTimeout(() => {
+                loader.classList.add("loader-hidden");
+            }, 1000); 
         });
     </script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="assets/app.js"></script>
-    <body>
+        <body>
 
 </html>
