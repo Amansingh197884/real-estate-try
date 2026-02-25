@@ -2784,7 +2784,7 @@ svg {
         }
 
        .blog-property .btn-submit {
-            background: var(--primary-color);
+            background: #d4af37;
             color: white;
             border: none;
             padding: 12px;
