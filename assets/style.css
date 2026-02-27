@@ -2819,3 +2819,25 @@ svg {
         .section-pa a{
             color: #000;
         }
+
+        /* pagination css  */
+        .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 4px);
+    cursor: pointer !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: var(--swiper-pagination-bullet-opacity, 1);
+    background: var(--accent, var(--accent)) !important;
+}
+.swiper-pagination-bullet {
+    width: 10px !important;
+    display: inline-block;
+    height: 10px !important;
+    border-radius: var(--swiper-pagination-bullet-border-radius, 50%);
+    background: var(--swiper-pagination-bullet-inactive-color, #000);
+    opacity: var(--swiper-pagination-bullet-inactive-opacity, .2);
+}
+.swiper-pagination-bullet:hover{
+    background-color: red !important;
+}
