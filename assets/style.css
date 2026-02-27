@@ -254,7 +254,7 @@ element.style {
 .btnn svg {
     width: 24px;
     height: auto;
-    fill: #FFF;
+    fill: #FFF ;
     display: inline-block;
     position: relative;
     margin-left: 10px;
@@ -998,8 +998,7 @@ hr {
     padding-bottom: 20px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .blog-section .blog-card:hover {
