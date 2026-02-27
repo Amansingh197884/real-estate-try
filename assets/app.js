@@ -4,6 +4,7 @@
             once: false, 
             mirror: true,
             anchorPlacement: 'top-center',
+            
         });
 
 

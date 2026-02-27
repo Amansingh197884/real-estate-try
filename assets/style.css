@@ -2388,7 +2388,9 @@ svg {
     height: 500px;
     width: 100%;
 }
-
+.all-type .project-img-wrapper img{
+    height: 430px;
+}
 /* css end         */
 .read-more-btn {
     font-weight: 600;
@@ -2733,7 +2735,7 @@ svg {
             transform: scale(1.1);
         }
 
-       .blog-property .img-overlay {
+    .img-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
@@ -2745,7 +2747,7 @@ svg {
             transition: 0.3s;
         }
 
-       .blog-property .project-img-wrapper:hover .img-overlay {
+        .project-img-wrapper:hover .img-overlay {
             opacity: 1;
         }
 
