@@ -251,10 +251,10 @@ element.style {
     }
 }
 
-.btnn svg {
+.btnn svg{
     width: 24px;
     height: auto;
-    fill: #FFF ;
+    fill: #FFF !important;
     display: inline-block;
     position: relative;
     margin-left: 10px;
@@ -2413,7 +2413,7 @@ svg {
 }
 
 .st0 {
-    fill: #000;
+    fill: #ffffff;
 }
 
 /* Hover Animation */
