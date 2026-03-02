@@ -1123,6 +1123,7 @@ box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;    transition: transform 0.3s e
     padding: 60px 0;
 }
 
+
 .services-title {
     font-family: 'Serif', 'Georgia', serif;
     font-size: 3rem;
@@ -1147,9 +1148,19 @@ box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;    transition: transform 0.3s e
     font-weight: 500;
     transition: 0.3s;
     border-radius: 0;
+    border-radius: 50px;
     /* Square edges for professional look */
 }
-
+.btn-read-more:hover {
+    padding: 12px 35px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    background-color: var(--accent);
+    transition: 0.3s;
+    border-color: var(--accent);
+    /* Square edges for professional look */
+}
 @media (max-width: 768px) {
     .services-title {
         font-size: 2.2rem;
