@@ -2177,13 +2177,13 @@ svg {
 }
 
 .property-details .amenity-card {
-    background: var(--gold);
+    /* background: var(--gold);
     padding: 30px;
     border-radius: 20px;
     text-align: center;
     border: 1px solid #eee;
     transition: 0.4s ease;
-    color: #fff !important;
+    color: #fff !important; */
 }
 
 .property-details .amenity-card:hover {
