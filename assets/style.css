@@ -2919,7 +2919,7 @@ svg {
         .plan-overlay .btn-view {
             margin-top: 15px;
             padding: 8px 25px;
-            background: #007bff;
+            background: var(--accent);
             color: white;
             border-radius: 50px;
             text-decoration: none;
